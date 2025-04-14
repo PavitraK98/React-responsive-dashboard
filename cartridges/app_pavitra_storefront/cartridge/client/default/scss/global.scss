@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+@import "./variables";
+@import "~base/skin/skinVariables";
+@import "~base/bootstrap-custom-import";
+@import "~base/bootstrapOverrides";
+@import "~base/utilities/responsiveUtils";
+@import "flag-icons/sass/flag-icons";
+@import "slick-carousel/slick/slick-theme";
+@import "slick-carousel/slick/slick";
+@import "~font-awesome/scss/font-awesome";
+@import url("https://fonts.googleapis.com/css?family=Dosis&subset=latin-ext"); /* stylelint-disable-line import-notation */
+@import "~base/components/common";
+@import "~base/components/header";
+@import "~base/components/footer";
+@import "~base/components/hero";
+@import "~base/components/headers";
+@import "~base/components/notification";
+@import "~base/components/pricing";
+@import "~base/components/productTiles";
+@import "~base/components/tabs";
+@import "~base/components/breadcrumb";
+@import "~base/components/spinner";
+@import "~base/miniCart";
+@import "~base/components/tooltip";
+@import "~base/components/headerSearch";
+
+
+*{
+  font-family: $primary-font;
+}
+
+.carousel-inner{
+  width: unset !important;
+}
+
+.carousel-control-prev{
+  color: #000000;
+  background-color: transparent;
+}
+
+.carousel-control-next{
+  color: #000000;
+  background-color: transparent;
+}

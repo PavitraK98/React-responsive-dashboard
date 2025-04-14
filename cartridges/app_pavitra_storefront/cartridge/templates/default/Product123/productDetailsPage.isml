@@ -1,0 +1,36 @@
+<div class="container">
+        <div class="row mt-4 mb-4">
+                <isinclude template="Product123/imageCarousel" sf-toolkit="on" />
+                <div class="col pl-4">
+                        <h1>${product.name}</h1>
+                        <hr />
+                        <h5>${product.id}</h5>
+                        <hr />
+                        <div class="text-break">
+                                <h4>${Resource.msg('Label.item.available.stock.status', 'product', null)}:
+                                        ${product.stockStatus}</h4>
+                                <h4> ${Resource.msg('Label.item.available.stock.unit', 'product', null)}:
+                                        ${product.stockUnits}</h4>
+                        </div>
+                        <h3>${Resource.msg('Label.price', 'product', null)}: ${product.price}</h3>
+                        <div class="text-break">
+                                <h4> ${Resource.msg('Label.item.description', 'product', null)}:
+                                        ${product.longDiscription}</h4>
+                                <h4>${Resource.msg('text.label.details', 'product', null)}: ${product.shortDiscription}
+                                </h4>
+                        </div>
+                        <isif condition="${product.onSale === true}">
+                                <span class="w-10 badge bg-success p-1 fs-6">
+                                        ${Resource.msg('Label.item.on.sale', 'product', null)}
+                                </span>
+                        </isif>
+                        <isif condition="${product.newArrival === true}">
+                                <span
+                                        class="position-absolute translate-middle badge bg-danger p-1 fs-6 mt-0">
+                                        ${Resource.msg('Label.item.new.arrival', 'product', null)}
+                                </span>
+                        </isif>
+
+                </div>
+        </div>
+</div>

@@ -1,0 +1,8 @@
+{
+    "hooks": [
+        {
+            "name": "dw.system.request.OnSession",
+            "script": "../app_custom_pavitra/cartridge/scripts/hooks/onSession.js"
+        }
+    ]
+}

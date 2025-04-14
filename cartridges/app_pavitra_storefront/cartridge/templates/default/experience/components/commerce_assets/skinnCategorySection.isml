@@ -1,0 +1,29 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/customLayout.css');
+</isscript>
+
+<div class="custom-skinn-cat-tails-container">
+    <div class="skinn-category-card" aria-label="Women's category">
+        <picture>
+            <source media="(max-width: 480px)" srcset="${pdict.womenImage.src.mobile}" />
+            <source media="(max-width: 768px)" srcset="${pdict.womenImage.src.tablet}" />
+            <img src="${pdict.womenImage.src.desktop}" alt="${pdict.womenAlt}" class="skinn-category-image"
+                loading="lazy" />
+        </picture>
+        <h6 class="category-heading">
+            <isprint value="${pdict.womenHeading}" encoding="on" />
+        </h6>
+    </div>
+    <div class="skinn-category-card" aria-label="Men's category">
+        <picture>
+            <source media="(max-width: 480px)" srcset="${pdict.menImage.src.mobile}" />
+            <source media="(max-width: 768px)" srcset="${pdict.menImage.src.tablet}" />
+            <img src="${pdict.menImage.src.desktop}" alt="${pdict.menAlt}" class="skinn-category-image"
+                loading="lazy" />
+        </picture>
+        <h6 class="category-heading">
+            <isprint value="${pdict.menHeading}" encoding="on" />
+        </h6>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<form xmlns="http://www.demandware.com/xml/form/2008-04-19" secure="false">
+        <field
+            formid="address"
+            label="user.label.address"
+            max-length="80"
+            mandatory="true"
+            missing-error="error.message.required"
+            range-error="error.message.50orless"
+            type="string"
+        />
+</form>

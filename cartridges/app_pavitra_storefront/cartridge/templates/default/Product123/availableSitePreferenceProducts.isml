@@ -1,0 +1,7 @@
+<isdecorate template="common/layout/page">
+    <div class="card m-2 p-2">
+        <isloop items="${pdict.productsList}" var="product" status="loopstatus">
+            <pre>${JSON.stringify(product)}</pre>
+        </isloop>
+    </div>
+</isdecorate>

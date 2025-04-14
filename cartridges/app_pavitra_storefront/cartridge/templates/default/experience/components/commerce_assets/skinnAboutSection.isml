@@ -1,0 +1,47 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/customLayout.css');
+</isscript>
+
+<div class="custom-about-brand-container">
+    <div class="custom-about-head">
+        <div class="custom-about-brand-facilities">
+            <div class="facility">
+                <picture>
+                    <source media="(max-width: 480px)" srcset="${pdict.originalImg.src.mobile}" />
+                    <source media="(max-width: 768px)" srcset="${pdict.originalImg.src.tablet}" />
+                    <img src="${pdict.originalImg.src.desktop}" alt="original" width="35" height="35" loading="lazy" />
+                </picture>
+                <p><b>${pdict.originalHeading}</b><br />
+                    ${pdict.originalText}</p>
+            </div>
+            <div class="facility">
+                <picture>
+                    <source media="(max-width: 480px)" srcset="${pdict.returnImg.src.mobile}" />
+                    <source media="(max-width: 768px)" srcset="${pdict.returnImg.src.tablet}" />
+                    <img src="${pdict.returnImg.src.desktop}" alt="return" width="35" height="35" loading="lazy" />
+                </picture>
+                <p><b>${pdict.returnHeading}</b><br />
+                    ${pdict.returnText}</p>
+            </div>
+            <div class="facility">
+                <picture>
+                    <source media="(max-width: 480px)" srcset="${pdict.shippingImg.src.mobile}" />
+                    <source media="(max-width: 768px)" srcset="${pdict.shippingImg.src.tablet}" />
+                    <img src="${pdict.shippingImg.src.desktop}" alt="shipping" width="40" height="40" loading="lazy" />
+                </picture>
+                <p><b>${pdict.shippingHeading}</b><br />
+                    ${pdict.shippingText}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="custom-about-brand-discription">
+        <p class="custom-about-brand-heading">${pdict.aboutHeading}</p>
+        <p class="custom-about-brand-paragraph">${pdict.aboutParagraph1}</p>
+        <p class="custom-about-brand-paragraph">${pdict.aboutParagraph2}</p>
+    </div>
+    <div class="custom-about-know-more-btn">
+        <button class="know-more-btn">${pdict.aboutButtonText}</button>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<link rel="preload" as="font" type="font/truetype" href="${URLUtils.staticURL('fonts/HindSiliguri-Regular.ttf')}" crossorigin/>
+
+<style>
+    @font-face {
+        font-family: "primary";
+        src: url(${URLUtils.staticURL('fonts/HindSiliguri-Regular.ttf')}) format("truetype");
+        font-weight:100 900;
+        font-style:normal;
+        font-display:swap;
+    }
+
+    @font-face {
+        font-family: "Test-font";
+        src: url(${URLUtils.staticURL('fonts/WinkyRough-Regular.ttf')}) format("ttf");
+        font-weight:100 900;
+        font-style:normal;
+        font-display:swap;
+    }
+</style>

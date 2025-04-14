@@ -1,0 +1,41 @@
+<div class="row">
+    <isif condition="${pdict.productDetails.length > 0}">
+        <isloop items="${pdict.productDetails}" var="pd" status="loopstatus">
+            <div class="col col-sm-12 col-md-4 col-lg-4">
+                <div class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+                    <div class="card-body text-break">
+                        <isprint value="${pd.getID()}" encoding="on" />
+                        <h5>
+                            ${Resource.msg('Label.item.name', 'product', null)}
+                            <isprint value="${pd.getName()}" encoding="on" />
+                        </h5>
+                        <h5>
+                            ${Resource.msg('Label.item.brand', 'product', null)}
+                            <isprint value="${pd.getBrand()}" encoding="on" />
+                        </h5>
+                        <h5>
+                            ${Resource.msg('Label.item.description', 'product', null)}
+                            <isprint value="${pd.getShortDescription()}" encoding="on" />
+                        </h5>
+                        <h5>
+                            ${Resource.msg('Label.item.manufacture', 'product', null)}
+                            <isprint value="${pd.getManufacturerName()}" encoding="on" />
+                        </h5>
+                        <h5>
+                            ${Resource.msg('Label.item.online', 'product', null)}
+                            <isprint value="${pd.isOnline()}" encoding="on" />
+                        </h5>
+                        <h5>
+                            ${Resource.msg('Lable.item.search', 'product', null)}
+                            <isprint value="${pd.isSearchable()}" encoding="on" />
+                        </h5>
+                        <h5>
+                            ${Resource.msg('Label.price', 'product', null)}
+                            <isprint value="${pd.priceModel.price}" encoding="on" />
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </isloop>
+    </isif>
+</div>

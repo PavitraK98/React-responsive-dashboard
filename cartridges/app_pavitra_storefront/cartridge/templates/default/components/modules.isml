@@ -1,0 +1,17 @@
+<ismodule template="/components/content/contentAsset" name="contentasset" attribute="aid" />
+
+<ismodule template="First/printMessage.isml" name="printmessage" attribute="pid" attribute="pname" attribute="pbrand" />
+
+
+<ismodule template="/Product123/productsWithImg" name="productswithimg" attribute="name" attribute="price"
+    attribute="productid" attribute="newarrival" attribute="onsale" attribute="shortdisc" attribute="image" />
+
+<ismodule template="/Form/displayMsg" name="displaymsg" attribute="message" />
+
+<ismodule template="/Product123/productDetailsPage" name="productdetailspage" attribute="product" />
+
+<iscomment> skinn </iscomment>
+
+<ismodule template="/components/layout/HomePageComponents/AboutBrandSection" name="skinnaboutbrandsection" />
+<ismodule template="/components/layout/HomePageComponents/YoutubeVidSection" name="youtubevidsection" />
+<ismodule template="/components/layout/HomePageComponents/SkinnCatTailsSection" name="skinncattailssection" />

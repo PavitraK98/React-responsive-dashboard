@@ -1,0 +1,12 @@
+
+
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/test.css');
+        assets.addJs('/js/test.js');
+    </isscript>
+    <div>
+         <button class="test-btn">test</button>
+    </div>
+</isdecorate>

@@ -1,0 +1,51 @@
+{
+  "name": "skinn Image With Text",
+  "description": "This is a skinn home page category tails with text.",
+  "group": "commerce_assets",
+  "attribute_definition_groups": [
+    {
+      "id": "skinnITCImage",
+      "attribute_definitions": [
+        {
+          "id": "womenImage",
+          "name": "Image",
+          "type": "image",
+          "required": true
+        },
+        {
+          "id": "womenHeading",
+          "name": "Text Overlay",
+          "type": "string",
+          "required": false
+        },
+        {
+          "id": "womenAlt",
+          "name": "Alt Text",
+          "description": "The image alt text shown by the component.",
+          "type": "string",
+          "required": false
+        },
+        {
+          "id": "menImage",
+          "name": "Image",
+          "type": "image",
+          "required": true
+        },
+        {
+          "id": "menAlt",
+          "name": "Alt Text",
+          "description": "The image alt text shown by the component.",
+          "type": "string",
+          "required": false
+        },
+        {
+          "id": "menHeading",
+          "name": "Text Overlay",
+          "type": "string",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "region_definitions": []
+}

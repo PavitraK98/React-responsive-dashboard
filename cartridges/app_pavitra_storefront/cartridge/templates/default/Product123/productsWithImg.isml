@@ -1,0 +1,23 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets');
+    assets.addJs('/js/main.js');
+        assets.addJs('https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js'); // Add this
+    assets.addCss('/css/customLayout.css');
+    assets.addCss('https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css');
+    assets.addCss('https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css');
+</isscript>
+<div class="products-list-container">
+    <isloop items="${pdict.products}" var="product" status="loopstatus">
+        <div class="product-card">
+            <img class="product-image" src="${product.images}" alt="${product.name}" />
+            <div class="product-body">
+                <h6 class="product-title">
+                    <isprint value="${product.name}" encoding="on" />
+                </h6>
+                <p class="product-price">
+                    &#8377; <isprint value="${product.price}" encoding="on" />
+                </p>
+            </div>
+        </div>
+    </isloop>
+</div>

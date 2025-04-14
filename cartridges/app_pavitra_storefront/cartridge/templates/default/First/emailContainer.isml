@@ -1,0 +1,9 @@
+<div class="container">
+    <div class="d-flex justify-content-center m-2">
+        <isprint value="${'Hello'
+                    pdict.firstName + " " + pdict.lastName}" encoding="on" />
+        <isprint value="${' Thank you for subscribing to RefArch email alerts.'}" encoding="on" />
+        
+        <isprint value="${'Thank you, RefArch Team.'}" encoding="on" />
+    </div>
+</div>

@@ -1,0 +1,50 @@
+<isdecorate template="common/layout/page">
+    <div class="container mt-4 mb-4">
+        <div class="card p-4">
+            <h3 class="card-title d-flex justify-content-center">
+                ${Resource.msg('text.heading.fill.details', 'userlabels', null)}
+            </h3>
+            <form class="row g-3" action="${pdict.submitURL}" method="post">
+
+                <div class="col-6 mt-3">
+                    <label class="form-control-label" for="firstName">
+                        <isprint value="${Resource.msg('user.label.fname', 'userlabels', null)}"
+                            encoding="htmlcontent" />
+                    </label>
+                    <input class="form-control" id="firstName" name="firstName" required />
+                </div>
+
+                <div class="col-6 mt-3">
+                    <label class="form-control-label" for="lastName">
+                        <isprint value="${Resource.msg('user.label.lname', 'userlabels', null)}"
+                            encoding="htmlcontent" />
+                    </label>
+                    <input type="text" class="form-control" id="lastName" name="lastName" required />
+                </div>
+
+                <div class="col-6 mt-3">
+                    <label class="form-control-label" for="email">
+                        <isprint value="${Resource.msg('user.label.email', 'userlabels', null)}"
+                            encoding="htmlcontent" />
+                    </label>
+                    <input type="email" class="form-control" id="email" name="email" required />
+                </div>
+
+
+                <div class="col-12 mt-2">
+                    <input type="checkbox" id="subscribe" name="subscribe" value="sub" />
+                    <label for="subscribe">
+                        <isprint value="${Resource.msg('user.email.subscribe', 'userlabels', null)}"
+                            encoding="htmlcontent" />
+                    </label>
+                </div>
+
+                <div class="col-12 mt-4">
+                    <button type="submit" class="btn btn-primary">
+                        ${Resource.msg('user.label.submit', 'userlabels', null)}
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</isdecorate>

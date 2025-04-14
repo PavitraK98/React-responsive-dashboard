@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<form xmlns="http://www.demandware.com/xml/form/2008-04-19" secure="false">
+	<group formid="user">
+        <field
+            formid="firstname"
+            label="user.label.fname"
+            mandatory="true"
+            max-length="50"
+            missing-error="error.message.required"
+            range-error="error.message.50orless"
+            type="string"
+        />
+
+        <field
+            formid="lastname"
+            label="user.label.lname"
+            mandatory="true"
+            max-length="50"
+            missing-error="error.message.required"
+            range-error="error.message.50orless"
+            type="string"
+        />
+
+        <field
+            formid="email"
+            type="string"
+            label="user.label.email"
+            mandatory="true"
+            max-length="50"
+            missing-error="error.message.required"
+            parse-error="error.message.parse.email.profile.form"
+            range-error="error.message.50orless"
+        />
+
+        <field
+            formid="gender"
+            label="user.label.gender"
+            mandatory="false"
+            max-length="8"
+            missing-error="error.message.required"
+            range-error="error.message.50orless"
+            type="string"
+        />
+
+        <field
+            formid="phone"
+            label="user.label.phone"
+            mandatory="true"
+            type="number"
+            min-length="10"
+            max-length="20"
+            missing-error="address.phone.missing"
+            range-error="error.message.between10and20"
+            parse-error="error.message.parse.phone"
+        />
+
+        <field
+            formid="age"
+            label="user.label.age"
+            mandatory="true"
+            type="number"
+            min="18"
+            max="100"
+            missing-error="error.message.required"
+            range-error="error.message.between18and100"
+        />
+
+        <field
+            formid="dateofbirth"
+            label="user.label.dob"
+            mandatory="true"
+            type="string"
+            format="YYYY-MM-DD"
+            missing-error="error.message.required"
+        />
+
+        <field
+            formid="icWomens"
+            label="user.label.womens"
+            type="string"
+            missing-error="error.message.required"
+        />
+
+         <field
+            formid="icMens"
+            label="user.label.mens"
+            type="string"
+            missing-error="error.message.required"
+        />
+
+         <field
+            formid="icElectronics"
+            label="user.label.electronics"
+            type="string"
+            missing-error="error.message.required"
+        />
+
+        <include formid="add" name="userAddress" />
+    </group>
+</form>

@@ -1,0 +1,11 @@
+<isdecorate template="components/layout/customLayout">
+        <isscript>
+                var assets = require('*/cartridge/scripts/assets.js');
+                assets.addCss('/css/customLayout.css');
+        </isscript>
+        <isinclude template="/components/modules" sf-toolkit="on" />
+
+        <isskinncattailssection />
+        <isyoutubevidsection />
+        <isskinnaboutbrandsection />
+</isdecorate>

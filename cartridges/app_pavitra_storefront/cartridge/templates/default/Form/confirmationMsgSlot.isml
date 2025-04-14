@@ -1,0 +1,27 @@
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets');
+        assets.addCss('/css/confirmationSlot.css');
+</isscript>
+    <div class="card-container">
+        <div class="confirmation-card">
+            <div class="slot-container"></div>
+            <h4 class="msg"></h4>
+            <iscomment> <isif condition="${pdict.objectResult.check === true}">
+                <isslot id="new-email-confirmation"
+                    description="This slot is about displaying confirmation message to newly created emails."
+                    context="global" />
+                <h4 class="msg">
+                    <isprint value="${pdict.objectResult.message}" encoding="on" />
+                </h4>
+            </isif> </iscomment>
+            <iscomment> <isif condition="${pdict.objectResult.check === false}">
+                <isslot id="existing-email-message" description="This slot is to display messages to an existing email."
+                    context="global" />
+                <h4 class="msg">
+                    <isprint value="${pdict.objectResult.message}" encoding="on" />
+                </h4>
+            </isif> </iscomment>
+        </div>
+    </div>
+</isdecorate>

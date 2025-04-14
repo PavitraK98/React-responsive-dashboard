@@ -1,0 +1,73 @@
+<isdecorate template="common/layout/page">
+    <div class="container mt-4 mb-4">
+        <div class="card p-4">
+            <h3 class="card-title d-flex justify-content-center">
+                ${Resource.msg('text.heading.fill.details', 'userlabels', null)}
+            </h3>
+            <form class="row g-3 user-form" action="${pdict.submitURL}" method="post" <isprint
+                value="${pdict.userDetailsMeta.attributes}" encoding="off" />>
+
+                <div class="col-6 mt-3 form-group">
+                    <label class="form-control-label" for="firstName">
+                        <isprint value="${Resource.msg(pdict.userDetailsMeta.user.firstname.label, 'userlabels', null)}"
+                            encoding="htmlcontent" />
+                    </label>
+                    <input class="form-control"
+                        data-missing-error="${Resource.msg('error.message.required', 'userlabels', null)}"
+                        data-range-error="${Resource.msg('error.message.50orless', 'userlabels', null)}"
+                        aria-describedby="form-fname-error" <isprint
+                        value=${pdict.userDetailsMeta.user.firstname.attributes} encoding="off" />
+                    />
+                    <div class="invalid-feedback"></div>
+                </div>
+
+                <div class="col-6 mt-3 form-group">
+                    <label class="form-control-label" for="lastName">
+                        <isprint value="${Resource.msg(pdict.userDetailsMeta.user.lastname.label, 'userlabels', null)}"
+                            encoding="htmlcontent" />
+                    </label>
+                    <input type="text" class="form-control" <isprint
+                        value="${pdict.userDetailsMeta.user.lastname.attributes}" encoding="off" /> />
+                    <div class="invalid-feedback"></div>
+                </div>
+
+                <div class="col-6 mt-3 form-group">
+                    <label class="form-control-label" for="email">
+                        <isprint value="${Resource.msg(pdict.userDetailsMeta.user.email.label, 'userlabels', null)}"
+                            encoding="htmlcontent" />
+                    </label>
+                    <input type="email" class="form-control" <isprint
+                        value="${pdict.userDetailsMeta.user.email.attributes}" encoding="off" /> />
+                    <div class="invalid-feedback"></div>
+
+                </div>
+
+                <div class="col-6 mt-3 form-group">
+                    <label class="form-control-label" for="phone">
+                        <isprint value="${Resource.msg(pdict.userDetailsMeta.user.phone.label, 'userlabels', null)}"
+                            encoding="htmlcontent" />
+                    </label>
+                    <input type="number" class="form-control" <isprint
+                        value="${pdict.userDetailsMeta.user.phone.attributes}" encoding="off" /> />
+                    <div class="invalid-feedback"></div>
+                </div>
+
+                <div class="col-12 mt-2 form-group">
+                    <label class="form-control-label" for="address">
+                        <isprint value="${Resource.msg(pdict.userDetailsMeta.user.add.address.label, 'userlabels', null)}"
+                            encoding="htmlcontent" />
+                    </label>
+                    <input type="text" class="form-control" <isprint
+                        value="${pdict.userDetailsMeta.user.add.address.attributes}" encoding="off" /> />
+                    <div class="invalid-feedback"></div>
+                </div>
+
+                <div class="col-12 mt-4">
+                    <button type="submit" class="btn btn-primary">
+                        ${Resource.msg('user.label.submit', 'userlabels', null)}
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</isdecorate>

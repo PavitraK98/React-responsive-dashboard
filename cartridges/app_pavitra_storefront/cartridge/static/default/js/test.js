@@ -1,0 +1,1 @@
+!function(){"use strict";$(document).ready((function(){$(".test-btn").on("click",(function(){console.log("btn-clicked")})),$(".header1-cancal-btn").on("click",(function(){console.log("cancel button clicked")}))}))}();

@@ -1,0 +1,33 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/customLayout.css');
+</isscript>
+<isinclude template="/components/modules" sf-toolkit="off" />
+
+
+<div class="custom-about-brand-container">
+    <div class="custom-about-brand-facilities">
+        <div class="facility">
+            <img src='${URLUtils.staticURL("/images/original-starbadge.png")}' alt="original" width="35" height="35" />
+            <p><b>${Resource.msg('text.100.original', 'commonText', null)}</b><br/>
+                ${Resource.msg('text.100.original.desc', 'commonText', null)}</p>
+        </div>
+        <div class="facility">
+            <img src='${URLUtils.staticURL("/images/7day-return.svg")}' alt="return" width="35" height="35" />
+            <p><b>${Resource.msg('text.7day.return', 'commonText', null)}</b><br/>
+                ${Resource.msg('text.7day.return.desc', 'commonText', null)}</p>
+        </div>
+        <div class="facility">
+            <img src='${URLUtils.staticURL("/images/shipping-icon.png")}' alt="shipping" width="35" height="35" />
+            <p><b>${Resource.msg('text.shipping', 'commonText', null)}</b><br/>
+                ${Resource.msg('text.shipping.desc', 'commonText', null)}</p>
+        </div>
+    </div>
+
+    <div class="custom-about-brand-discription">
+        <iscontentasset aid="skinn-about-brand-above-footer" />
+    </div>
+    <div class="custom-about-know-more-btn">
+        <button class="btn default">${Resource.msg('text.know.more', 'commonText', null)}</button>
+    </div>
+</div>

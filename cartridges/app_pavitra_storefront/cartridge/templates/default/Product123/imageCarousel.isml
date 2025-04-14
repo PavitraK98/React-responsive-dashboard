@@ -1,0 +1,26 @@
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <isloop items="${pdict.product.images}" var="image" status="loopstatus">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="${loopstatus.index}"
+                    class="${loopstatus.first ? 'active' : ''}"
+                    ></button>
+        </isloop>
+    </div>
+
+    <div class="carousel-inner">
+        <isloop items="${pdict.product.images}" var="image" status="loopstatus">
+                <div class="carousel-item ${loopstatus.first ? 'active' : ''}">
+                    <img src="${image}" class="d-block w-100" alt="Product Image" />
+                </div>
+        </isloop>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </button>
+</div>

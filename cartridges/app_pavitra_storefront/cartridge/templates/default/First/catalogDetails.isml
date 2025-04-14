@@ -1,0 +1,29 @@
+<isdecorate template="common/layout/page">
+    <div class="container mt-5 mb-5 text-break">
+        <isif condition="${pdict.catagoryDetails.length > 0}">
+            <isloop items="${pdict.catagoryDetails}" var="element" status="loopstatus">
+                <h5>${Resource.msg('Lable.item.id', 'product', null)}
+                    <isprint value="${element.getID()}" encoding="on" />
+                </h5>
+                <h5>${Resource.msg('Label.item.name', 'product', null)}
+                    <isprint value="${element.displayName}" encoding="on" />
+                </h5>
+                <h5>
+                    <isprint value=" L1 category products: " encoding="on" />
+                    <isloop items="${element.onlineProducts}" var="a" status="loopstatus">
+                        <isprint value="${a.getID()}" encoding="on" />
+                    </isloop>
+                    <isloop items="${element.onlineSubCategories}" var="b" status="loopstatus">
+                        <h5>
+                            <isprint value="L2 category products: " encoding="on" />
+                            <isprint value="${b.getID()}" encoding="on" />
+                        </h5>
+                        <isloop items="${b.onlineProducts}" var="c" status="loopstatus">
+                            <isprint value="${c.getID()}" encoding="on" />
+                        </isloop>
+                    </isloop>
+                </h5>
+            </isloop>
+        </isif>
+    </div>
+</isdecorate>

@@ -1,0 +1,50 @@
+<isdecorate template="common/layout/page">
+    <iscontent type="text/html" charset="UTF-8" compact="true" />
+
+    <div class="card">
+        <div class="card-body">
+            <isif condition="${pdict.productDetails.length > 0}">
+                <table class="table table-bordered">
+                    <tr>
+                        <th>${Resource.msg('Lable.item.id', 'product', null)}</th>
+                        <th>${Resource.msg('Label.item.name', 'product', null)}</th>
+                        <th>${Resource.msg('Label.item.brand', 'product', null)}</th>
+                        <th>${Resource.msg('Label.item.long.description', 'product', null)}</th>
+                        <th>${Resource.msg('Label.item.short.description', 'product', null)}</th>
+                        <th>${Resource.msg('Label.item.on.sale', 'product', null)}</th>
+                        <th>${Resource.msg('Label.item.new.arrival', 'product', null)}</th>
+                        <th>${Resource.msg('Label.price', 'product', null)}</th>
+                    </tr>
+                    <isloop items="${pdict.productDetails}" var="product" status="loopstatus">
+                        <tr>
+                            <td>
+                                <isprint value="${product.getID()}" encoding="on" />
+                            </td>
+                            <td>
+                                <isprint value="${product.getName()}" encoding="on" />
+                            </td>
+                            <td>
+                                <isprint value="${product.getBrand()}" encoding="on" />
+                            </td>
+                            <td>
+                                <isprint value="${product.getLongDescription()}" encoding="on" />
+                            </td>
+                            <td>
+                                <isprint value="${product.getShortDescription()}" encoding="on" />
+                            </td>
+                            <td>
+                                <isprint value="${product.custom.isSale}" encoding="on" />
+                            </td>
+                            <td>
+                                <isprint value="${product.custom.isNewtest}" encoding="on" />
+                            </td>
+                            <td>
+                                <isprint value="${product.priceModel.price.value}" encoding="on" />
+                            </td>
+                        </tr>
+                    </isloop>
+                </table>
+            </isif>
+        </div>
+    </div>
+</isdecorate>

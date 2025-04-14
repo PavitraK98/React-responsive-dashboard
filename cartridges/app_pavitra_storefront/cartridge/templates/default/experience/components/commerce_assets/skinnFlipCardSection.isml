@@ -1,0 +1,58 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/customLayout.css');
+</isscript>
+<div class="skinn-Flip-card-container">
+    <div class="flip-container">
+        <div class="flip-inner container">
+            <!-- Front Side -->
+            <div class="flip-card-front container">
+                <div class="flip-card-img">
+                    <picture>
+                        <source media="(max-width: 480px)" srcset="${pdict.cardImage1.src.mobile}" />
+                        <source media="(max-width: 768px)" srcset="${pdict.cardImage1.src.tablet}" />
+                        <img src="${pdict.cardImage1.src.desktop}" alt="${pdict.cardHeading1}" class="skinn-flip-image"
+                            width="550" height="500" loading="lazy" />
+                    </picture>
+                </div>
+                <div class="skinn-flip-desc">
+                    <div class="skinn-arrow-desc-container">
+                        <div class="card-control-prev">&#10094;</div>
+                        <div class="flip-desc">
+                            <h6>${pdict.cardHeading1}</h6><br />
+                            <p>${pdict.cardText1}</p>
+                        </div>
+                        <div class="card-control-next">&#10095;</div>
+                    </div>
+                    <!-- Indicators -->
+                    <div class="flip-indicators">
+                        <span class="indicator active" data-index="0"></span>
+                        <span class="indicator" data-index="1"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Back Side -->
+            <div class="flip-card-back container">
+                <div class="flip-card-img">
+                    <picture>
+                        <source media="(max-width: 480px)" srcset="${pdict.cardImage2.src.mobile}" />
+                        <source media="(max-width: 768px)" srcset="${pdict.cardImage2.src.tablet}" />
+                        <img src="${pdict.cardImage2.src.desktop}" alt="${pdict.cardHeading2}" class="skinn-flip-image"
+                            width="550" height="500" loading="lazy" />
+                    </picture>
+                </div>
+                <div class="skinn-flip-desc">
+                    <div class="skinn-arrow-desc-container">
+                        <div class="card-control-prev">&#10094;</div>
+                        <div class="flip-desc">
+                            <h6>${pdict.cardHeading2}</h6><br />
+                            <p>${pdict.cardText2}</p>
+                        </div>
+                        <div class="card-control-next">&#10095;</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

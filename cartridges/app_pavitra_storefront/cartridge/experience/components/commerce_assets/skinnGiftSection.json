@@ -1,0 +1,37 @@
+{
+    "name": "Skinn gifting section With Text",
+    "description": "This is a component that can displays about gifting with accompanying text",
+    "group": "commerce_assets",
+    "attribute_definition_groups": [
+      {
+        "id": "gifting",
+        "attribute_definitions": [
+          {
+            "id": "backgroundImg",
+            "description": "Enter the background image URL",
+            "type": "image",
+            "required": true
+          },
+          {
+            "id": "heading",
+            "name": "heading",
+            "type": "string",
+            "required": false
+          },
+          {
+            "id": "paragraph",
+            "name": "paragraph",
+            "type": "string",
+            "required": false
+          },
+          {
+            "id": "buttonText",
+            "name": "buttonText",
+            "type": "string",
+            "required": false
+          }
+        ]
+      }
+    ],
+    "region_definitions": []
+  }

@@ -1,0 +1,15 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/customLayout.css');
+</isscript>
+
+<div class="custom-skinn-youtube-container">
+    <div class="about-video-container">
+        <iframe width="800" height="430" src="${pdict.youtubeUrl}" frameborder=0 allowfullscreen>
+        </iframe>
+    </div>
+    <div class="custom-skinn-about-video-desc">
+        <p class="about-desc-heading">${pdict.heading}</p>
+        <p class="about-desc-para">${pdict.paragraph}</p>
+    </div>
+</div>

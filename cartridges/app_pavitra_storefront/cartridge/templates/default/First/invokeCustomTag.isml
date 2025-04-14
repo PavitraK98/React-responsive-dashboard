@@ -1,0 +1,9 @@
+<isinclude template="/components/modules" sf-toolkit="off" />
+
+<isdecorate template="common/layout/page">
+    <div class="card m-5">
+        <isloop items="${pdict.productDetails}" var="a" status="loopstatus">
+            <isprintmessage pid="${a.id}" pname="${a.name}" pbrand="${a.brand}" pprice="${a.price}" />
+        </isloop>
+    </div>
+</isdecorate>

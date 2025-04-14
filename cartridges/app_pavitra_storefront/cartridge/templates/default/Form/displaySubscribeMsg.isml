@@ -1,0 +1,9 @@
+<isdecorate template="common/layout/page">
+    <div class="card w-75 m-5">
+        <div class="card-body">
+            <div class="card-text">
+                <h3> ${pdict.message}</h3>
+            </div>
+        </div>
+    </div>
+</isdecorate>

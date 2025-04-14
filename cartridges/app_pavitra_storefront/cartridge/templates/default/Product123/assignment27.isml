@@ -1,0 +1,58 @@
+<isdecorate template="common/layout/page">
+    <div class="m-5">
+        <iscomment> ${JSON.stringify(pdict.productDetails)} </iscomment>
+        <isif condition="${pdict.productDetails.message === false}">
+            <div class="card-body text-break">
+                <isprint value="${'Product of ID ' + pdict.productDetails.value + ' is not found'}" encoding="on" />
+            </div>
+        <iselse/>
+            <isloop items="${pdict.productDetails}" var="product" status="loopstatus">
+                <div class="card-body text-break">
+                    <div class="d-flex flex-row">
+                        <div class="p-2">
+                            <isloop items="${product.value.images}" var="pdimg" status="loopstatus">
+                                <img class="tile-image" src="${pdimg}" alt="${product.value.name}" width=400
+                                    height=400 />
+                            </isloop>
+                        </div>
+                        <div class="p-2 align-content-center justify-content-start">
+                            <h2 class="lh-base">
+                                <isprint value="${product.value.name}" encoding="on" />
+                            </h2>
+                            <hr />
+                            <p class="text-secondary">
+                                <isprint value="${product.value.id}" encoding="on" />
+                            </p>
+                            <hr />
+                            <p class="fs-6 fw-normal lh-base">
+                                ${Resource.msg('Label.item.description', 'product', null)}:
+                                <isprint value="${product.value.shortDiscription}" encoding="on" />
+                            </p>
+                            <h5>
+                                ${Resource.msg('Label.item.available.stock.status', 'product', null)}:
+                                <isprint value="${product.value.stockStatus}" encoding="on" />
+                            </h5>
+                            <h3 class="p-3 mb-2 d-flex align-content-center justify-content-center">
+                                <b>
+                                    <isprint value="${product.value.price}" encoding="on" />
+                                </b>
+                            </h3>
+                            <div class="d-flex align-content-center justify-content-center">
+                                <button type="button" class="btn btn-primary">
+                                    <i class="fa fa-shopping-cart"></i>
+                                    ${Resource.msg('text.label.add.cart.button', 'product', null)}
+                                </button>
+                            </div>
+                            <div class="d-flex align-content-center justify-content-center">
+                                <i class="fa fa-facebook fs-1 p-3"></i>
+                                <i class="fa fa-pinterest fs-1 p-3"></i>
+                                <i class="fa fa-twitter fs-1 p-3"></i>
+                                <i class="fa fa-link fs-1 p-3"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </isloop>
+        </isif>
+    </div>
+</isdecorate>

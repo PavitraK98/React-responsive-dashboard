@@ -1,0 +1,23 @@
+<iscomment> <isdecorate template="common/layout/page">
+    <isinclude template="/components/modules" sf-toolkit="off" />
+
+    <div class="container mt-5 mb-5">
+        <isloop items="${pdict.productDetails}" var="a" status="loopstatus">
+            <iscookie name="Product-ID" value="${a.getID()}" />
+        </isloop>
+        <hr />
+        <isinclude template="First/includeTemplate1" sf-toolkit="on" />
+        <hr />
+        <isinclude url="${URLUtils.url('First-Test1')}" sf-toolkit="on" />
+        <hr />
+        <iscomponent pipeline="First-Test2" />
+    </div>
+</isdecorate> </iscomment>
+<isdecorate template="common/layout/page">
+    <div class="imge-container">
+        <img src="https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Library-Sites-TitanSharedLibrary/default/dwfeedbf65/images/homepage/All_Banners/BestSellers_Sept_D.jpg" alt="">
+        <img src="https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Library-Sites-TitanSharedLibrary/default/dw164a4548/images/homepage/All_Banners/Ti_smrt_60_d.jpg" alt="">
+        <img src="https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Library-Sites-TitanSharedLibrary/default/dw0ded7e33/images/homepage/All_Banners/Workwear_Nov_D.jpg" alt="">
+        <img src="https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Library-Sites-TitanSharedLibrary/default/dw164a4548/images/homepage/All_Banners/Ti_smrt_60_d.jpg" alt="">
+    </div>
+</isdecorate>

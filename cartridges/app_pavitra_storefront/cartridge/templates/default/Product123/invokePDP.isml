@@ -1,0 +1,5 @@
+<isinclude template="/components/modules" sf-toolkit="on" />
+
+<isloop items="${pdict.ProductDetails}" var="product" status="loopstatus">
+    <isproductdetailspage product="${product}" />
+</isloop>

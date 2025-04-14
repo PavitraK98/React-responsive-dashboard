@@ -1,0 +1,13 @@
+<isdecorate template="common/layout/page">
+    <div class="card w-75 m-5">
+        <div class="card-body">
+            <h4>
+                <isprint value="${'Product ID :  ' + pdict.productID}" encoding="on" />
+            </h4>
+            <h4>
+                <isprint value="${'Quantity :  ' + pdict.quantity}" encoding="on" />
+            </h4>
+            <pre>${JSON.stringify(pdict.status)}</pre>
+        </div>
+    </div>
+</isdecorate>

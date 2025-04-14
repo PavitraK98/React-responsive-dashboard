@@ -1,0 +1,36 @@
+<isdecorate template="common/layout/page">
+    <div class="container text-break mt-4 mb-4">
+        <iscomment> <isprint value="${request.httpCookies['Product-ID'].getValue()}" encoding="on" /> </iscomment>
+        <div class="card p-3">
+            <isloop items="${pdict.product}" var="a" status="loopstatus">
+                <h5>${Resource.msg('Lable.item.id', 'product', null)}:
+                    <isprint value="${a.getID()}" encoding="on" />
+                </h5>
+                <h5>${Resource.msg('Label.item.name', 'product', null)}:
+                    <isprint value="${a.getName()}" encoding="on" />
+                </h5>
+                <h5>${Resource.msg('Label.item.brand', 'product', null)}:
+                    <isprint value="${a.getBrand()}" encoding="on" />
+                </h5>
+                <isloop items="${a.categories}" var="b" status="loopstatus">
+                    <h5>${Resource.msg('Label.item.categories', 'product', null)}:
+                        <isprint value="${b.displayName}" encoding="on" />
+                    </h5>
+                </isloop>
+                <h5>${Resource.msg('Label.item.available.stock.unit', 'product', null)}:
+                    <isprint value="${a.availabilityModel.availability}" encoding="on" />
+                </h5>
+                <h5>${Resource.msg('Label.item.available.stock.status', 'product', null)}:
+                    <isprint value="${a.availabilityModel.availabilityStatus}" encoding="on" />
+                </h5>
+                <h5>
+                    ${Resource.msg('Label.price', 'product', null)}:
+                    <isprint value="${a.priceModel.priceInfo.price}" encoding="on" />
+                    ${Resource.msg('text.openingBracket', 'product', null)}
+                    <isprint value="${a.priceModel.priceInfo.priceBook.displayName}" encoding="on" />
+                    ${Resource.msg('text.closingBracket', 'product', null)}
+                </h5>
+            </isloop>
+        </div>
+    </div>
+</isdecorate>

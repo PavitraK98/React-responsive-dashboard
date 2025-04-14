@@ -1,0 +1,35 @@
+<isscript>
+        var assets = require('*/cartridge/scripts/assets');
+        assets.addCss('/css/customLayout.css');
+</isscript>
+<div class="skinn-testimonials-container">
+    <p class="skinn-testimonial-header">${pdict.heading}</p>
+    <p class="skinn-testimonial-subheader">${pdict.subHeadline}</p>
+    <div class="testimonial-cards-container container">
+        <div class="testimonial-card-content-container">
+            <isloop items="${pdict.reviewsList}" var="review" status="loopstatus">
+                <div class="testimonial-content">
+                    <div class="testimonial-content-head">
+                        <p class="review-date-text">${review.date}</p>
+                        <p class="review-name-text">${review.name}</p>
+                        <isif condition="${review.verifiedBuyer}">
+                            <p class="review-verified-text">
+                                <img src='${URLUtils.staticURL("/images/check-icon.png")}' alt="check-icon" width=12
+                                    height=12 />
+                                <isprint value="${'Verified Buyer'}" />
+                            </p>
+                        </isif>
+                    </div>
+                    <div class="testimonial-content-footer">
+                        <p class="review-star">
+                            <img src='${URLUtils.staticURL("/images/stars-rating.png")}' alt="check-icon" width=120
+                                height=120 />
+                        </p>
+                        <p class="review-title-text">${review.title}</p>
+                        <p class="review-desc-text">${review.description}</p>
+                    </div>
+                </div>
+            </isloop>
+        </div>
+    </div>
+</div>

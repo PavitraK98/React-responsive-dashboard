@@ -1,0 +1,51 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/customLayout.css');
+</isscript>
+
+<div class="custom-header-navbar">
+    <nav>
+        <div class="custom-nav-hamburger">
+            <img src='${URLUtils.staticURL("/images/hamburger.png")}' alt="profile" width=25 height=25 />
+        </div>
+        <div class="logo">
+            <img src='${URLUtils.staticURL("/images/Skinn_black.svg")}' alt="skinn-logo" />
+        </div>
+        <div class="custom-menu-container">
+            <a href="#" class="custom-nav-item" role="button">
+                ${Resource.msg('text.men', 'commonText', null)}
+            </a>
+            <a href="#" class="custom-nav-item" role="button">
+                ${Resource.msg('text.women', 'commonText', null)}
+            </a>
+            <a href="#" class="custom-nav-item" role="button">
+                ${Resource.msg('text.collections', 'commonText', null)}
+            </a>
+            <a href="#" class="custom-nav-item" role="button">
+                ${Resource.msg('text.gifting', 'commonText', null)}
+            </a>
+            <a href="#" class="custom-nav-item" role="button">
+                ${Resource.msg('text.fastrack.fragrances', 'commonText', null)}
+            </a>
+            <a href="#" class="custom-nav-item" role="button">
+                ${Resource.msg('text.sale', 'commonText', null)}
+            </a>
+        </div>
+        <div class="custom-header-section">
+            <img src='${URLUtils.staticURL("/images/search.png")}' alt="profile" width=25 height=25 />
+            <img src='${URLUtils.staticURL("/images/user-profile.png")}' alt="profile" width=20 height=20 />
+            <span class="badge-to-icon">
+                <img src='${URLUtils.staticURL("/images/wishlist.png")}' alt="profile" width=22 height=22 />
+                <span class="icon-button-badge">
+                    <isprint value="${'0'}" encoding="on" />
+                </span>
+            </span>
+            <span class="badge-to-icon">
+                <img src='${URLUtils.staticURL("/images/shopping-cart.png")}' alt="profile" width=20 height=20 />
+                <span class="icon-button-badge">
+                    <isprint value="${'2'}" encoding="on" />
+                </span>
+            </span>
+        </div>
+    </nav>
+</div>

@@ -1,0 +1,7 @@
+<isinclude template="/components/modules" sf-toolkit="off" />
+<iscookie name="ProductID" value="mitsubishi-wd-60C8M5" />
+<iscomment> <iscookie name="ProductID" value="M1355M" /> </iscomment>
+<iscomment> <iscookie name="ProductID" value="abc013Book1" /> </iscomment>
+<div class="m-auto">
+    <isprint value="${'this page is to set cookie value for ProductID'}" encoding="on" />
+</div>

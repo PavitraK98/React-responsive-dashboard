@@ -1,0 +1,31 @@
+{
+    "name": "Skinn Youtube Media With Text",
+    "description": "This is a component that can displays a YouTube video with accompanying text",
+    "group": "commerce_assets",
+    "attribute_definition_groups": [
+      {
+        "id": "ITCImage",
+        "attribute_definitions": [
+          {
+            "id": "youtubeUrl",
+            "description": "Enter the YouTube video URL",
+            "type": "string",
+            "required": true
+          },
+          {
+            "id": "heading",
+            "name": "heading",
+            "type": "string",
+            "required": false
+          },
+          {
+            "id": "paragraph",
+            "name": "paragraph",
+            "type": "string",
+            "required": false
+          }
+        ]
+      }
+    ],
+    "region_definitions": []
+  }

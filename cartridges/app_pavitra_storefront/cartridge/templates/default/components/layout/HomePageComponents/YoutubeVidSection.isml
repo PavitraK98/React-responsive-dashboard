@@ -1,0 +1,14 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/customLayout.css');
+</isscript>
+
+<div class="custom-skinn-youtube-container">
+    <iframe width=800 height=430 src="https://www.youtube.com/embed/zyOdppVsPRY?color=white" frameborder=0
+        allowfullscreen>
+    </iframe>
+    <div class="custom-skinn-about-video-desc">
+        <h3>${Resource.msg('text.youtube.title','commonText', null)}</h3>
+        <p><isprint value="${"Perfumery is a rare art and it's time to meet an artist extraordinaire. Presenting #NotesFromAPerfumer, featuring principal perfumer Ilias Ermenidis, the creative genius behind SKINN Noura perfumes, in conversation with yours truly Mira Kapoor."}" encoding="on" /></p>
+    </div>
+</div>

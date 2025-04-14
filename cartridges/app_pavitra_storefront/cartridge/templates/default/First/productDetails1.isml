@@ -1,0 +1,43 @@
+<isdecorate template="common/layout/page">
+    <div class="row">
+        <isif condition="${pdict.productDetails.length > 0}">
+            <isloop items="${pdict.productDetails}" var="pd" status="loopstatus">
+                <div class="col col-sm-12 col-md-4 col-lg-4">
+                    <div class="card m-4 shadow-sm p-3 bg-body-tertiary rounded">
+                        <div class="d-flex justify-content-start mb-2">
+                            <span class="badge text-bg-info bg-primary text-white fw-semibold">
+                                ${Resource.msgf('Label.index', 'product', null, loopstatus.index+1)}
+                            </span>
+                        </div>
+                        <div class="card-body text-break">
+                            <h5>
+                                ${Resource.msg('Label.item.name', 'product', null)}:
+                                <isprint value="${pd.id}" encoding="on" />
+                            </h5>
+                            <h5>
+                                ${Resource.msg('Label.item.brand', 'product', null)}:
+                                <isprint value="${pd.name}" encoding="on" />
+                            </h5>
+                            <h5>
+                                ${Resource.msg('Label.item.manufacture', 'product', null)}:
+                                <isprint value="${pd.manufacturer}" encoding="on" />
+                            </h5>
+                            <h5>
+                                ${Resource.msg('Label.price', 'product', null)}:
+                                <isprint value="${pd.price}" encoding="on" />
+                            </h5>
+                            <h5>
+                                ${Resource.msg('Label.item.available.stock.status', 'product', null)}:
+                                <isprint value="${pd.stockStatus}" encoding="on" />
+                            </h5>
+                            <h5>
+                                ${Resource.msg('Label.item.available.stock.unit', 'product', null)}:
+                                <isprint value="${pd.stockUnits}" encoding="on" />
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </isloop>
+        </isif>
+    </div>
+</isdecorate>

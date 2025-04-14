@@ -1,0 +1,59 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/customLayout.css');
+</isscript>
+<isinclude template="/components/modules" sf-toolkit="on" />
+
+<footer id="customfooter">
+    <div class="custom-footer">
+        <div class="custom-footer-content1">
+            <div class="custom-footer-item">
+                <img class="custom-footer-logo" src='${URLUtils.staticURL("/images/Logo-Mobile-Black.svg")}' alt="skinn-logo" />
+            </div>
+            <iscomment>
+                <div class="custom-footer-hr"></div>
+            </iscomment>
+            <div class="custom-footer-item">
+                <iscontentasset aid="skinn-footer-help-section" />
+            </div>
+            <iscomment>
+                <div class="custom-footer-hr"></div>
+            </iscomment>
+            <div class="custom-footer-item">
+                <h5>${Resource.msg('text.footer.signup', 'commonText', null)}</h5>
+                <div class="custom-footer-email-container">
+                <input type="text" id="email" name="email" placeholder="Enter your email address" />
+                <button class="custom-footer-subscribe-icon-btn">
+                    <img src='${URLUtils.staticURL("/images/arrow-right.png")}' alt="subscribe-btn" width=25 height=25 />
+                </button>
+                </div>
+                <button type="button" class="custom-footer-subscribe-btn">
+                    ${Resource.msg('text.subscribe', 'commonText', null)}
+                </button>
+            </div>
+        </div>
+        <div class="custom-footer-content2">
+            <div class="custom-footer-2-item1">
+                <h5>${Resource.msg('text.follow.connect', 'commonText', null)}</h5>
+                <div class="custom-footer-follow-icon-container">
+                    <img src='${URLUtils.staticURL("/images/facebook.png")}' alt="facebook" width=25 height=25 />
+                    <img src='${URLUtils.staticURL("/images/instagram.png")}' alt="instagram" width=25 height=25 />
+                    <img src='${URLUtils.staticURL("/images/whatsapp.png")}' alt="whatsapp" width=25 height=25 />
+                    <img src='${URLUtils.staticURL("/images/email.png")}' alt="email" width=25 height=30
+                        class="mt-2" />
+                </div>
+            </div>
+            <hr />
+            <div class="custom-footer-2-item2">
+                <p>${Resource.msg('text.terms', 'commonText', null)}</p>
+                <div class="custom-footer-2-item2-2">
+                    <img src='${URLUtils.staticURL("/images/visa-icon.svg")}' alt="visa" width=30 height=30 />
+                    <img src='${URLUtils.staticURL("/images/payPal-icon.svg")}' alt="paypal" width=35 height=35 />
+                    <img src='${URLUtils.staticURL("/images/rupay-icon.svg")}' alt="rupay" width=40 height=40 />
+                    <img src='${URLUtils.staticURL("/images/axisbank-icon.svg")}' alt="axisbank" width=45 height=45 />
+                    <img src='${URLUtils.staticURL("/images/maestro-icon.svg")}' alt="maestro" width=30 height=30 />
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

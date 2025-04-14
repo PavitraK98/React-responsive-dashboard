@@ -1,0 +1,97 @@
+{
+    "name": "Skinn About Brand Section",
+    "description": "This is about brand of skinn",
+    "group": "commerce_assets",
+    "attribute_definition_groups": [
+      {
+        "id": "skinnFacilities",
+        "attribute_definitions": [
+          {
+            "id": "originalImg",
+            "name": "Original Img",
+            "type": "image",
+            "required": true
+          },
+          {
+            "id": "originalHeading",
+            "name": "Original Heading",
+            "type": "string",
+            "required": true
+          },
+          {
+            "id": "originalText",
+            "name": "Original Text",
+            "type": "string",
+            "required": true
+          },
+          {
+            "id": "returnImg",
+            "name": "Return Image",
+            "type": "image",
+            "required": true
+          },
+          {
+            "id": "returnText",
+            "name": "Return Text",
+            "description": "The image alt text shown by the component.",
+            "type": "string",
+            "required": false
+          },
+          {
+            "id": "returnHeading",
+            "name": "Return Heading",
+            "type": "string",
+            "required": false
+          },
+          {
+            "id": "shippingImg",
+            "name": "Shipping Img",
+            "type": "image",
+            "required": true
+          },
+          {
+            "id": "shippingHeading",
+            "name": "Shipping Heading",
+            "type": "string",
+            "required": true
+          },
+          {
+            "id": "shippingText",
+            "name": "Shipping Text",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      {
+        "id": "aboutDescription",
+        "attribute_definitions": [
+          {
+            "id": "aboutHeading",
+            "name": "About Heading",
+            "type": "string",
+            "required": true
+          },
+          {
+            "id": "aboutParagraph1",
+            "name": "About Paragraph 1",
+            "type": "string",
+            "required": true
+          },
+          {
+            "id": "aboutParagraph2",
+            "name": "About Paragraph 2",
+            "type": "string",
+            "required": true
+          },
+          {
+            "id": "aboutButtonText",
+            "name": "About Button Text",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    ],
+    "region_definitions": []
+  }

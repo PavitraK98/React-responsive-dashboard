@@ -1,0 +1,49 @@
+{
+    "name": "Skinn Image Flip With Text Section",
+    "description": "This is a skinn home page category tails with text and images.",
+    "group": "commerce_assets",
+    "attribute_definition_groups": [
+      {
+        "id": "skinnFlipSection",
+        "attribute_definitions": [
+          {
+            "id": "cardImage1",
+            "name": "Card Image1",
+            "type": "image",
+            "required": true
+          },
+          {
+            "id": "cardHeading1",
+            "name": "Card Heading1",
+            "type": "string",
+            "required": true
+          },
+          {
+            "id": "cardText1",
+            "name": "Card Text1",
+            "type": "string",
+            "required": true
+          },
+          {
+            "id": "cardImage2",
+            "name": "Card Image2",
+            "type": "image",
+            "required": true
+          },
+          {
+            "id": "cardHeading2",
+            "name": "Card Heading2",
+            "type": "string",
+            "required": true
+          },
+          {
+            "id": "cardText2",
+            "name": "Card Text2",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    ],
+    "region_definitions": []
+  }

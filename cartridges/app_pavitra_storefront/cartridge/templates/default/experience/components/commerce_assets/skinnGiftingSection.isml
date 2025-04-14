@@ -1,0 +1,17 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/customLayout.css');
+</isscript>
+
+<div class="skinn-gift-container">
+    <picture>
+        <source media="(max-width: 480px)" srcset="${pdict.backgroundImg.src.mobile}" />
+        <source media="(max-width: 768px)" srcset="${pdict.backgroundImg.src.tablet}" />
+        <img src="${pdict.backgroundImg.src.desktop}" alt="${pdict.heading}" class="skinn-gift-image" loading="lazy" />
+    </picture>
+    <div class="overlay-content">
+        <p class="overlay-content-heading">${pdict.heading}</p><br />
+        <p class="overlay-content-para">${pdict.paragraph}</p><br />
+        <a href="#" class="skinn-gift-button">${pdict.buttonText}</a>
+    </div>
+</div>

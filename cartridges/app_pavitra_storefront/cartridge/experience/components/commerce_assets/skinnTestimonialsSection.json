@@ -1,0 +1,29 @@
+{
+    "name": "Carousel With slick",
+    "group": "commerce_assets",
+    "attribute_definition_groups": [
+      {
+        "id": "heading",
+        "attribute_definitions": [
+          {
+            "id": "headline",
+            "name": "carousel title",
+            "type": "string",
+            "required": false
+          }
+        ]
+      },
+      {
+        "id": "subHeading",
+        "attribute_definitions": [
+          {
+            "id": "subHeadline",
+            "name": "carousel sub title",
+            "type": "string",
+            "required": false
+          }
+        ]
+      }
+    ],
+    "region_definitions": []
+  }

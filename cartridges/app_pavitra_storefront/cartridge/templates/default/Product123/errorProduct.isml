@@ -1,0 +1,11 @@
+<isdecorate template="common/layout/page">
+    <div class="container text-break mt-3 mb-3">
+        <isif condition="${pdict.productDetailsNon.length > 0}">
+            <isloop items="${pdict.productDetailsNon}" var="item" status="loopstatus">
+                <h6>
+                    ${Resource.msgf('text.item.notavailable','product',null,item.id)}
+                </h6>
+            </isloop>
+        </isif>
+    </div>
+</isdecorate>
