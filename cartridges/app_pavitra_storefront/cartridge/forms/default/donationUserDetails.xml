@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<form xmlns="http://www.demandware.com/xml/form/2008-04-19" secure="false">
+	<group formid="user">
+        <field
+            formid="firstname"
+            label="user.label.fname"
+            mandatory="true"
+            max-length="50"
+            missing-error="error.message.required"
+            range-error="error.message.50orless"
+            type="string"
+        />
+
+        <field
+            formid="lastname"
+            label="user.label.lname"
+            mandatory="true"
+            max-length="50"
+            missing-error="error.message.required"
+            range-error="error.message.50orless"
+            type="string"
+        />
+
+        <field
+            formid="email"
+            type="string"
+            label="user.label.email"
+            mandatory="true"
+            max-length="50"
+            missing-error="error.message.required"
+            parse-error="error.message.parse.email.profile.form"
+            range-error="error.message.50orless"
+        />
+
+        <field
+            formid="amount"
+            type="number"
+            label="user.label.donation.amount"
+            mandatory="true"
+            missing-error="error.message.required"
+        />
+
+     </group>
+</form>

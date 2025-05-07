@@ -1,0 +1,89 @@
+{
+  "step-types":{
+    "script-module-step":[
+      {
+        "@type-id":"custom.MyCustomScriptStepTypeP",
+        "@supports-parallel-execution":"true",
+        "@supports-site-context":"true",
+        "@supports-organization-context":"false",
+        "description":"My custom script step type",
+        "module":"app_pavitra_storefront/cartridge/scripts/jobs/moveFile.js",
+        "function":"moveFile",
+        "transactional":"false",
+        "timeout-in-seconds":"900",
+        "parameters":
+        {
+          "parameter":
+          [
+            {
+              "@name":"CatalogFileOldPath",
+              "@type":"string",
+              "@required":"true",
+              "description":"A required catalog file old path parameter."
+            },
+            {
+              "@name":"ListPriceBookFileOldPath",
+              "@type":"string",
+              "@required":"true",
+              "description":"A required ListPriceBookFile old path parameter."
+            },
+            {
+              "@name":"SalePriceBookFileOldPath",
+              "@type":"string",
+              "@required":"true",
+              "description":"A required SalePriceBookFile old path parameter."
+            },
+            {
+              "@name":"InventoryFileOldPath",
+              "@type":"string",
+              "@required":"true",
+              "description":"A required InventoryFile old path parameter."
+            },
+            {
+              "@name":"CatalogFileNewPath",
+              "@type":"string",
+              "@required":"true",
+              "description":"A required catalog file new path parameter."
+            },
+            {
+              "@name":"ListPriceBookFileNewPath",
+              "@type":"string",
+              "@required":"true",
+              "description":"A required ListPriceBookFile new path parameter."
+            },
+            {
+              "@name":"SalePriceBookFileNewPath",
+              "@type":"string",
+              "@required":"true",
+              "description":"A required SalePriceBookFile new path parameter."
+            },
+            {
+              "@name":"InventoryFileNewPath",
+              "@type":"string",
+              "@required":"true",
+              "description":"A required InventoryFile new path parameter."
+            }
+          ]
+        },
+        "status-codes":
+        {
+                  "status":
+          [
+                      {
+                          "@code": "ERROR",
+                          "description": "Used when the step failed with an error."
+                      },
+                      {
+                          "@code": "FINISHED",
+              "description": "Used when the step finished successfully."
+                      },
+                      {
+                          "@code": "FINISHED_WITH_WARNINGS",
+              "description": "Used when the step finished with warnings."
+                      }
+                  ]
+              }
+      }
+    ]
+  }
+}

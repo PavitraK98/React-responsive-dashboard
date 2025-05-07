@@ -1,0 +1,16 @@
+<div class="container">
+    <h5>Good News!</h5>
+    <p>
+        The item you were waiting for is back in stock.
+    </p>
+    <p>
+        Click below to view the product and complete your purchase:
+    </p>
+    <a href="${URLUtils.url('Product-Show').toString() + '?pid=' + pdict.ProductID.toString()}" class="btn">
+        View Product ${pdict.ProductID}
+    </a>
+    <p>Thanks,<br />RefArch Team</p>
+    <div class="footer">
+        If you have any questions, please contact our support team.
+    </div>
+</div>

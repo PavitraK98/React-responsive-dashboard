@@ -1,10 +1,9 @@
 <isscript>
     var assets = require('*/cartridge/scripts/assets');
-    assets.addJs('/js/main.js');
-        assets.addJs('https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js'); // Add this
-    assets.addCss('/css/customLayout.css');
+    assets.addJs('https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js');
     assets.addCss('https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css');
-    assets.addCss('https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css');
+    assets.addCss('/css/customLayout.css');
+    assets.addJs('/js/main.js');
 </isscript>
 <div class="products-list-container">
     <isloop items="${pdict.products}" var="product" status="loopstatus">

@@ -1,0 +1,29 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/customTarte.css');
+</isscript>
+
+<footer id="customtartefooter">
+    <div class="custom-tarte-footer">
+        <div class="custom-tarte-footer-item">
+            <div class="custom-tarte-footer-icon-container">
+                <img src='${URLUtils.staticURL("/images/facebook-black.png")}' alt="facebook" width=25 height=25 />
+                <img src='${URLUtils.staticURL("/images/instagram-black.png")}' alt="instagram" width=25 height=25 />
+                <img src='${URLUtils.staticURL("/images/youtube-black.png")}' alt="whatsapp" width=25 height=25 />
+                <select class="form-select p-2" aria-label="Default select example">
+                    <option selected>Open this select menu</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+            </div>
+        </div>
+        <div class="custom-tarte-footer-item">
+            <div class="custom-tarte-footer-item-container">
+                <p>${Resource.msg('text.tarte.powered', 'commonText', null)}</p>
+                <p>${Resource.msg('text.tarte.terms', 'commonText', null)}</p>
+                <p>${Resource.msg('text.tarte.privacy', 'commonText', null)}</p>
+            </div>
+        </div>
+    </div>
+</footer>

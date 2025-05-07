@@ -1,0 +1,71 @@
+@import "./variables";
+
+.custom-tarte-header-navbar {
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  z-index: 10000;
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow:
+      rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+      rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    z-index: 1;
+  }
+}
+
+//footer
+#customtartefooter {
+  background-color: #ffffff;
+  padding: 0;
+  font-family: $primary-font;
+
+  .custom-tarte-footer {
+    background-color: #ffffff;
+    width: 100%;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    font-family: $primary-font;
+  }
+
+  .custom-tarte-footer-item {
+    padding-top: 2rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-family: $primary-font;
+  }
+
+  .custom-tarte-footer-icon-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .custom-tarte-footer-item-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .custom-tarte-footer-item-container p{
+    font-size: 16px;
+    white-space: nowrap;
+    font-weight: 550;
+  }
+
+  .custom-tarte-footer-item-container p:hover{
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}

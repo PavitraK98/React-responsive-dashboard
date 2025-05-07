@@ -1,11 +1,3 @@
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: primary;
-}
-
 .custom-header-navbar {
   position: sticky;
   top: 0;
@@ -15,7 +7,7 @@
   font-family: primary;
 }
 
-nav {
+.custom-header-navbar nav {
   padding: 5px 5%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -29,9 +21,10 @@ nav {
   -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
           box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   z-index: 1;
+  font-family: primary;
 }
 
-nav .logo {
+.custom-header-navbar .logo {
   padding: 2px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -41,7 +34,7 @@ nav .logo {
           align-items: center;
 }
 
-nav .logo img {
+.custom-header-navbar .logo img {
   height: 35px;
   width: auto;
   margin-right: 10px;
@@ -64,6 +57,7 @@ nav .logo img {
   border-width: 1px;
   text-decoration: none;
   border-radius: 0%;
+  font-family: primary;
 }
 
 .custom-header-section {
@@ -81,6 +75,7 @@ nav .logo img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-family: primary;
 }
 
 .custom-header-section .badge-to-icon {
@@ -130,6 +125,7 @@ nav .logo img {
 #customfooter {
   background-color: #000000;
   padding: 0;
+  font-family: primary;
 }
 
 .custom-footer {
@@ -142,6 +138,7 @@ nav .logo img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  font-family: primary;
 }
 
 .custom-footer-logo {
@@ -157,6 +154,7 @@ nav .logo img {
   width: 200px;
   padding: 8px;
   margin-top: 12px;
+  font-family: primary;
 }
 
 .custom-footer-item {
@@ -174,6 +172,7 @@ nav .logo img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  font-family: primary;
 }
 
 .custom-footer-content1 {
@@ -182,6 +181,7 @@ nav .logo img {
   padding-left: 3rem;
   padding-right: 3rem;
   overflow: hidden;
+  font-family: primary;
 }
 
 .custom-footer-subscribe-btn {
@@ -220,11 +220,13 @@ nav .logo img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-family: primary;
 }
 
 .custom-footer-content2 {
   padding-left: 3rem;
   padding-right: 3rem;
+  font-family: primary;
 }
 
 .custom-footer-follow-icon-container {
@@ -246,12 +248,14 @@ nav .logo img {
 
 .custom-footer-2-item1 {
   padding-top: 5px;
+  font-family: primary;
 }
 
 .custom-footer-2-item2 {
   padding: 3px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  font-family: primary;
 }
 
 .custom-footer-2-item2-2 {
@@ -263,6 +267,7 @@ nav .logo img {
       -ms-flex-direction: row;
           flex-direction: row;
   gap: 15px;
+  font-family: primary;
 }
 
 .custom-footer-hr {
@@ -279,15 +284,18 @@ nav .logo img {
     padding-left: 2rem;
     padding-right: 2rem;
     overflow: hidden;
+    font-family: primary;
   }
   .custom-footer-content2 {
     padding-left: 2rem;
     padding-right: 2rem;
+    font-family: primary;
   }
   .custom-footer-2-item2 {
     padding-top: 1rem;
     padding-bottom: 1rem;
     grid-template-columns: 1fr;
+    font-family: primary;
   }
   .custom-footer-2-item2-2 {
     -webkit-box-pack: center;
@@ -296,15 +304,18 @@ nav .logo img {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    font-family: primary;
   }
   .custom-footer-subscribe-icon-btn {
     display: block;
   }
   .custom-footer-subscribe-btn {
     display: none;
+    font-family: primary;
   }
   .custom-footer-2-item1 {
     padding-top: 20px;
+    font-family: primary;
   }
   .facility {
     gap: 10px;
@@ -321,15 +332,18 @@ nav .logo img {
     padding-left: 2rem;
     padding-right: 2rem;
     overflow: hidden;
+    font-family: primary;
   }
   .custom-footer-content2 {
     padding-left: 2rem;
     padding-right: 2rem;
+    font-family: primary;
   }
   .custom-footer-2-item2 {
     padding-top: 1rem;
     padding-bottom: 1rem;
     grid-template-columns: 1fr;
+    font-family: primary;
   }
   .custom-footer-2-item2-2 {
     -webkit-box-pack: center;
@@ -338,12 +352,15 @@ nav .logo img {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    font-family: primary;
   }
   .custom-footer-2-item1 {
     padding-top: 20px;
+    font-family: primary;
   }
   .custom-about-brand-facilities {
     grid-template-columns: 300px 300px;
+    font-family: primary;
   }
 }
 /* Medium devices (landscape tablets, 768px and up) */
@@ -353,15 +370,18 @@ nav .logo img {
     overflow: hidden;
     padding-left: 2rem;
     padding-right: 2rem;
+    font-family: primary;
   }
   .custom-footer-content2 {
     padding-left: 2rem;
     padding-right: 2rem;
+    font-family: primary;
   }
   .custom-footer-2-item2 {
     padding-top: 1rem;
     padding-bottom: 1rem;
     grid-template-columns: 1fr 1fr;
+    font-family: primary;
   }
   .custom-footer-2-item2-2 {
     -webkit-box-pack: right;
@@ -370,13 +390,16 @@ nav .logo img {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    font-family: primary;
   }
   .custom-footer-2-item1 {
     padding-top: 20px;
+    font-family: primary;
   }
   .custom-about-brand-facilities {
     padding: 10px;
     gap: 15px;
+    font-family: primary;
   }
   .facility p {
     font-size: 13px;
@@ -390,15 +413,18 @@ nav .logo img {
     overflow: hidden;
     padding-left: 3rem;
     padding-right: 3rem;
+    font-family: primary;
   }
   .custom-footer-content2 {
     padding-left: 3rem;
     padding-right: 3rem;
+    font-family: primary;
   }
   .custom-footer-2-item2 {
     padding-top: 1rem;
     padding-bottom: 1rem;
     grid-template-columns: 1fr 1fr 1fr;
+    font-family: primary;
   }
   .custom-footer-2-item2-2 {
     -webkit-box-pack: right;
@@ -407,12 +433,15 @@ nav .logo img {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    font-family: primary;
   }
   .custom-footer-2-item1 {
     padding-top: 20px;
+    font-family: primary;
   }
   .custom-about-brand-facilities {
     grid-template-columns: 300px 300px 300px;
+    font-family: primary;
   }
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -422,15 +451,18 @@ nav .logo img {
     overflow: hidden;
     padding-left: 3rem;
     padding-right: 3rem;
+    font-family: primary;
   }
   .custom-footer-content2 {
     padding-left: 3rem;
     padding-right: 3rem;
+    font-family: primary;
   }
   .custom-footer-2-item2 {
     padding-top: 1rem;
     padding-bottom: 1rem;
     grid-template-columns: 1fr 1fr 1fr;
+    font-family: primary;
   }
   .custom-footer-2-item2-2 {
     -webkit-box-pack: right;
@@ -439,23 +471,28 @@ nav .logo img {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    font-family: primary;
   }
   .custom-footer-2-item1 {
     padding-top: 20px;
+    font-family: primary;
   }
   .custom-about-brand-facilities {
     grid-template-columns: 300px 300px 300px;
+    font-family: primary;
   }
 }
 .custom-about-brand-container {
   overflow: hidden;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  font-family: primary;
 }
 
 .custom-about-head {
   background-color: #f5f5f5;
   width: 100%;
+  font-family: primary;
 }
 
 .custom-about-brand-facilities {
@@ -481,6 +518,7 @@ nav .logo img {
       -ms-flex-align: start;
           align-items: flex-start;
   gap: 15px;
+  font-family: primary;
 }
 
 .facility img {
@@ -524,6 +562,7 @@ nav .logo img {
 .custom-about-brand-paragraph {
   color: #777;
   font-size: 13px;
+  line-height: 20px;
   word-break: break-word;
   font-family: primary;
 }
@@ -607,7 +646,7 @@ nav .logo img {
 .about-desc-para {
   text-align: left;
   font-size: 0.9rem;
-  line-height: 18px;
+  line-height: 20px;
   font-weight: 500;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -662,6 +701,7 @@ nav .logo img {
           flex: 1 1 45%;
   max-width: 600px;
   text-align: center;
+  font-family: primary;
 }
 
 .skinn-category-image {
@@ -684,6 +724,7 @@ nav .logo img {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 100%;
             flex: 1 1 100%;
+    font-family: primary;
   }
 }
 .skinn-gift-container {
@@ -753,6 +794,7 @@ nav .logo img {
           align-items: center;
   margin: 0;
   padding: 0;
+  font-family: primary;
 }
 
 .overlay-content-para {
@@ -773,6 +815,7 @@ nav .logo img {
           align-items: center;
   margin: 0;
   padding: 0;
+  font-family: primary;
 }
 
 .skinn-gift-button {
@@ -797,12 +840,15 @@ nav .logo img {
     overflow: hidden;
     top: 50%;
     left: 50%;
+    font-family: primary;
   }
   .overlay-content-heading {
     width: 100%;
+    font-family: primary;
   }
   .overlay-content-para {
     width: 100%;
+    font-family: primary;
   }
 }
 .skinn-Flip-card-container {
@@ -850,6 +896,7 @@ nav .logo img {
           flex-direction: row;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
+  font-family: primary;
 }
 
 .skinn-flip-image {
@@ -877,7 +924,7 @@ nav .logo img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  font-family: "HindSiliguri-Regular";
+  font-family: primary;
 }
 
 .skinn-arrow-desc-container {
@@ -900,18 +947,18 @@ nav .logo img {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  font-family: "HindSiliguri-Regular";
+  font-family: primary;
 }
 
 .flip-desc h6 {
   text-transform: uppercase;
-  font-family: "HindSiliguri-Regular";
+  font-family: primary;
 }
 
 .flip-desc p {
   padding: 0 2.5rem;
   font-size: 0.8rem;
-  font-family: "HindSiliguri-Regular";
+  font-family: primary;
 }
 
 .flip-card-img,
@@ -931,12 +978,14 @@ nav .logo img {
 .flip-card-front .flip-desc {
   -webkit-transform: rotateY(0deg);
           transform: rotateY(0deg);
+  font-family: primary;
 }
 
 .flip-card-back .flip-card-img,
 .flip-card-back .flip-desc {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
+  font-family: primary;
 }
 
 .card-control-prev,
@@ -963,14 +1012,20 @@ nav .logo img {
   right: 0;
 }
 
-.card-control-prev:hover,
-.card-control-next:hover {
-  background-color: rgba(66, 139, 207, 0.8);
-}
-
 .flip-indicators {
-  text-align: center;
-  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .indicator {
@@ -978,15 +1033,13 @@ nav .logo img {
   width: 6px;
   height: 6px;
   margin: 0 5px;
-  background-color: #ccc;
   border-radius: 50%;
-  cursor: pointer;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
+  background-color: #bbb7b7;
 }
 
 .indicator.active {
-  background-color: #bbb7b7;
   outline: 1px solid #ffffff;
   outline-offset: 3px;
 }
@@ -1014,11 +1067,13 @@ nav .logo img {
   }
   .skinn-flip-desc {
     width: 50%;
+    font-family: primary;
   }
 }
 @media (max-width: 767px) {
   .skinn-Flip-card-container {
     height: 700px;
+    font-family: primary;
   }
   .flip-card-front,
   .flip-card-back {
@@ -1048,6 +1103,7 @@ nav .logo img {
   margin-top: 30px;
   margin-bottom: 30px;
   text-align: center;
+  font-family: primary;
 }
 
 .products-list-container {
@@ -1109,6 +1165,7 @@ nav .logo img {
   font-weight: 700;
   text-align: center;
   width: 100%;
+  font-family: primary;
 }
 
 .product-price {
@@ -1116,6 +1173,7 @@ nav .logo img {
   font-size: 0.9rem;
   text-align: center;
   width: 100%;
+  font-family: primary;
 }
 
 .products-list-container .slick-slide {
@@ -1136,7 +1194,7 @@ nav .logo img {
 .slick-prev:before {
   font-size: 0.5rem;
   border: solid black;
-  border-width: 0 3px 3px 0;
+  border-width: 0 2px 2px 0;
   display: inline-block;
   padding: 3px;
   transform: rotate(135deg);
@@ -1146,7 +1204,7 @@ nav .logo img {
 .slick-next:before {
   font-size: 0.5rem;
   border: solid black;
-  border-width: 0 3px 3px 0;
+  border-width: 0 2px 2px 0;
   display: inline-block;
   padding: 3px;
   transform: rotate(-45deg);
@@ -1163,6 +1221,7 @@ nav .logo img {
   .products-list-container {
     padding-right: 2rem;
     padding-left: 2rem;
+    font-family: primary;
   }
   .slick-prev {
     left: 5px;
@@ -1176,6 +1235,7 @@ nav .logo img {
   .products-list-container {
     padding-right: 2rem;
     padding-left: 2rem;
+    font-family: primary;
   }
   .slick-prev {
     left: 5px;
@@ -1189,6 +1249,7 @@ nav .logo img {
   .products-list-container {
     padding-right: 2rem;
     padding-left: 2rem;
+    font-family: primary;
   }
   .slick-prev {
     left: 15px;
@@ -1254,9 +1315,12 @@ nav .logo img {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: auto;
   font-family: primary;
 }
@@ -1300,6 +1364,7 @@ nav .logo img {
 @media screen and (max-width: 768px) {
   .testimonial-cards-container .slick-slide {
     padding: 0 8px;
+    font-family: primary;
   }
 }
 .testimonial-content-head {
@@ -1398,4 +1463,46 @@ nav .logo img {
 
 .review-star img {
   z-index: 0;
+}
+
+.skinnBannerWithSlick-container .skinnBanner-slick-dots {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  z-index: 2;
+}
+
+.skinnBannerWithSlick-container .skinnBanner-slick-dots li button {
+  display: none;
+}
+
+.skinnBannerWithSlick-container .skinnBanner-slick-dots li {
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  opacity: 0.6;
+  border-radius: 50%;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+.skinnBannerWithSlick-container .skinnBanner-slick-dots li.slick-active {
+  outline: 1px solid #ffffff;
+  outline-offset: 3px;
+  opacity: 1;
 }

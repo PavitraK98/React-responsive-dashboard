@@ -1,0 +1,17 @@
+<div class="col-12 position-relative">
+    <form id="notifyForm" class="product-bins-form" action="${URLUtils.url('ProductBINS-Submit')}" method="post">
+        <div class="input-group mb-3">
+            <input type="hidden" name="productID" value="${pdict.product.id}" />
+            <input type="text" class="form-control" name="emailAddress" placeholder="Email address" />
+            <button class="btn btn-primary" type="submit">
+                <isprint value="${'NOTIFY ME'}" encoding="on" />
+            </button>
+        </div>
+        <div class="successPopUp alert-success d-none p-3 border border-success">
+        </div>
+        <div class="infoPopup alert-info d-none p-3 border border-info">
+        </div>
+        <div class="errorPopUp alert-danger d-none p-3 border border-danger">
+        </div>
+    </form>
+</div>

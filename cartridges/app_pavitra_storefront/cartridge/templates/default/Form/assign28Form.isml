@@ -1,3 +1,175 @@
-<isdecorate template="common/layout/testLayout">
-this is atest
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets');
+        assets.addJs('/js/formUser.js');
+</isscript>
+    <div class="container mt-4 mb-4">
+        <div class="card p-4">
+            <form class="user-login-form" action="${pdict.submitURL}" method="post" <isprint
+                value="${pdict.userDetailsMeta.attributes}" encoding="off" />>
+            <div class="result-container">
+                <div class="slot-container d-none">
+                    <isslot id="new-email-confirmation"
+                        description="Displaying confirmation message to newly created emails." context="global" />
+                    <isslot id="existing-email-message"
+                        description="This slot is to display messages to an existing email." context="global" />
+                </div>
+                <h4 class="msg"></h4>
+            </div>
+
+            <div class="form-container container">
+                <div class="row justify-content-center mb-4">
+                    <div class="col-12 text-center">
+                        <h3 class="card-title">
+                            ${Resource.msg('text.heading.fill.details', 'userlabels', null)}
+                        </h3>
+                    </div>
+                </div>
+
+                <div class="row g-3">
+                    <div class="col-md-6 form-group">
+                        <label class="form-control-label" for="firstName">
+                            <b>
+                                <isprint
+                                    value="${Resource.msg(pdict.userDetailsMeta.user.firstname.label, 'userlabels', null)}"
+                                    encoding="htmlcontent" /></b>
+                        </label>
+                        <input class="form-control"
+                            data-missing-error="${Resource.msg('error.message.required', 'userlabels', null)}"
+                            data-range-error="${Resource.msg('error.message.50orless', 'userlabels', null)}"
+                            aria-describedby="form-fname-error" <isprint
+                            value=${pdict.userDetailsMeta.user.firstname.attributes} encoding="off" />
+                        />
+                        <div class="invalid-feedback"></div>
+                    </div>
+
+                    <div class="col-md-6 form-group">
+                        <label class="form-control-label" for="lastName">
+                            <b>
+                                <isprint
+                                    value="${Resource.msg(pdict.userDetailsMeta.user.lastname.label, 'userlabels', null)}"
+                                    encoding="htmlcontent" /></b>
+                        </label>
+                        <input type="text" class="form-control" <isprint
+                            value="${pdict.userDetailsMeta.user.lastname.attributes}" encoding="off" />
+                        />
+                        <div class="invalid-feedback"></div>
+                    </div>
+
+                    <div class="col-md-6 form-group">
+                        <label class="form-control-label" for="email">
+                            <b>
+                                <isprint
+                                    value="${Resource.msg(pdict.userDetailsMeta.user.email.label, 'userlabels', null)}"
+                                    encoding="htmlcontent" /></b>
+                        </label>
+                        <input type="email" class="form-control" <isprint
+                            value="${pdict.userDetailsMeta.user.email.attributes}" encoding="off" />
+                        />
+                        <div class="invalid-feedback"></div>
+                    </div>
+
+                    <div class="col-md-6 form-group">
+                        <label class="form-control-label" for="dateofbirth">
+                            <b>
+                                <isprint
+                                    value="${Resource.msg(pdict.userDetailsMeta.user.dateofbirth.label, 'userlabels', null)}"
+                                    encoding="htmlcontent" /></b>
+                        </label>
+                        <input type="date" class="form-control" <isprint
+                            value="${pdict.userDetailsMeta.user.dateofbirth.attributes}" encoding="off" />
+                        />
+                        <div class="invalid-feedback"></div>
+                    </div>
+
+                    <div class="col-md-6 form-group">
+                        <label class="form-control-label" for="age">
+                            <b>
+                                <isprint
+                                    value="${Resource.msg(pdict.userDetailsMeta.user.age.label, 'userlabels', null)}"
+                                    encoding="htmlcontent" /></b>
+                        </label>
+                        <input type="number" class="form-control" <isprint
+                            value="${pdict.userDetailsMeta.user.age.attributes}" encoding="off" />
+                        />
+                        <div class="invalid-feedback"></div>
+                    </div>
+
+                    <div class="col-md-6 form-group">
+                        <label class="form-control-label d-block" for="gender">
+                            <b>
+                                <isprint
+                                    value="${Resource.msg(pdict.userDetailsMeta.user.gender.label, 'userlabels', null)}"
+                                    encoding="htmlcontent" /></b>
+                        </label>
+                        <div class="d-flex gap-3 justify-content-evenly align-items-center">
+                            <div class="form-check d-flex justify-content-evenly align-items-center">
+                                <input class="form-check-input" type="radio" value="Female" <isprint
+                                    value="${pdict.userDetailsMeta.user.gender.attributes}" encoding="off" />
+                                />
+                                <label class="form-check-label" for="female">
+                                    ${Resource.msg('user.gender.female', 'userlabels', null)}
+                                </label>
+                            </div>
+                            <div class="form-check d-flex justify-content-evenly align-items-center">
+                                <input class="form-check-input" type="radio" value="Male" <isprint
+                                    value="${pdict.userDetailsMeta.user.gender.attributes}" encoding="off" />
+                                />
+                                <label class="form-check-label" for="male">
+                                    ${Resource.msg('user.gender.male', 'userlabels', null)}
+                                </label>
+                            </div>
+                        </div>
+                        <div class="invalid-feedback"></div>
+                    </div>
+
+                    <div class="col-md-12 form-group">
+                        <label class="form-control-label d-block" for="interestedcat">
+                            <b>
+                                <isprint value="${Resource.msg('user.label.interested.categories', 'userlabels', null)}"
+                                    encoding="htmlcontent" /></b>
+                        </label>
+                        <div class="d-flex gap-3 justify-content-evenly align-items-center">
+                            <div class="form-check d-flex justify-content-evenly align-items-center">
+                                <input class="form-check-input" type="checkbox" value="Women's" <isprint
+                                    value="${pdict.userDetailsMeta.user.icWomens.attributes}" encoding="off" />
+                                />
+                                <label class="form-check-label" for="womens">
+                                    ${Resource.msg(pdict.userDetailsMeta.user.icWomens.label, 'userlabels', null)}
+                                </label>
+                            </div>
+                            <div class="form-check d-flex justify-content-evenly align-items-center">
+                                <input class="form-check-input" type="checkbox" value="Men's" <isprint
+                                    value="${pdict.userDetailsMeta.user.icMens.attributes}" encoding="off" />
+                                />
+                                <label class="form-check-label" for="mens">
+                                    ${Resource.msg(pdict.userDetailsMeta.user.icMens.label, 'userlabels', null)}
+                                </label>
+                            </div>
+                            <div class="form-check d-flex justify-content-evenly align-items-center">
+                                <input class="form-check-input" type="checkbox" value="Electronics" <isprint
+                                    value="${pdict.userDetailsMeta.user.icElectronics.attributes}" encoding="off" />
+                                />
+                                <label class="form-check-label" for="electronics">
+                                    ${Resource.msg(pdict.userDetailsMeta.user.icElectronics.label, 'userlabels', null)}
+                                </label>
+                            </div>
+                        </div>
+                        <div class="invalid-feedback"></div>
+                    </div>
+
+                    <input type="hidden" name="${pdict.csrf.tokenName}" value="${pdict.csrf.token}" />
+
+                    <div class="col-12 mt-3 text-center">
+                        <button class="submit-form28-btn btn btn-primary" type="submit">
+                            ${Resource.msg('user.label.submit', 'userlabels', null)}
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            </form>
+        </div>
+    </div>
+
 </isdecorate>

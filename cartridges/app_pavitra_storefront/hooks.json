@@ -2,7 +2,19 @@
     "hooks": [
         {
             "name": "dw.system.request.OnSession",
-            "script": "../app_custom_pavitra/cartridge/scripts/hooks/onSession.js"
+            "script": "./cartridge/scripts/hooks/onSession.js"
+        },
+        {
+            "name": "app.payment.processor.basic_credit",
+            "script": "./cartridge/scripts/hooks/payment/processor/basic_credit.js"
+        },
+        {
+            "name": "app.payment.processor.basic_credit_p_c",
+            "script": "./cartridge/scripts/hooks/payment/processor/basic_creditPC"
+        },
+        {
+            "name": "app.payment.form.processor.basic_credit_p_c",
+            "script": "./cartridge/scripts/hooks/payment/processor/basic_credit_form_processorPC"
         }
     ]
 }

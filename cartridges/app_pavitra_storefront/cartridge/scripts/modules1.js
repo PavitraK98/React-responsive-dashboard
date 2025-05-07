@@ -42,6 +42,7 @@ function getProductDetails(productID) {
     var productData = {
         id: product.getID(),
         name: product.getName(),
+        brand: product.brand,
         manufacturer: product.getManufacturerName(),
         online: product.isOnline(),
         searchable: product.isSearchable(),
@@ -52,6 +53,7 @@ function getProductDetails(productID) {
         longDiscription: product.getLongDescription().markup || null,
         onSale: product.custom.isSale,
         newArrival: product.custom.isNewtest,
+        available: product.availabilityModel,
         color: product.variants && product.variants.length > 0 ? product.variants[0].custom.color : null,
         images: product.getImage('large', 0).getImageURL({ scaleWidth: 200, format: 'jpg' }),
     };

@@ -9,7 +9,7 @@
             <img src='${URLUtils.staticURL("/images/hamburger.png")}' alt="profile" width=25 height=25 />
         </div>
         <div class="logo">
-            <img src='${URLUtils.staticURL("/images/Skinn_black.svg")}' alt="skinn-logo" />
+            <img src='${URLUtils.staticURL("/images/Skinn_black.svg")}' alt="skinn-logo" width=25 height=25 />
         </div>
         <div class="custom-menu-container">
             <a href="#" class="custom-nav-item" role="button">

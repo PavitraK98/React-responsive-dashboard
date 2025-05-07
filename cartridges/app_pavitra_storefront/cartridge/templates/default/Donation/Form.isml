@@ -1,0 +1,86 @@
+<isdecorate template="common/layout/page">
+    <div class="container mt-4 mb-4">
+        <div class="card p-4">
+            <form class="user-donation-form" action="${pdict.redirectURL}" method="get" <isprint
+                value="${pdict.userDetailsMeta.attributes}" encoding="off" />>
+
+            <div class="form-container container">
+                <div class="row justify-content-center mb-4">
+                    <div class="col-12 text-center">
+                        <h3 class="card-title">
+                            ${Resource.msg('text.heading.donation', 'userlabels', null)}
+                        </h3>
+                    </div>
+                </div>
+
+                <div class="row g-3">
+                    <div class="col-md-6 form-group">
+                        <label class="form-control-label" for="firstName">
+                            <b>
+                                <isprint
+                                    value="${Resource.msg(pdict.userDetailsMeta.user.firstname.label, 'userlabels', null)}"
+                                    encoding="htmlcontent" /></b>
+                        </label>
+                        <input class="form-control" <isprint value="${pdict.userDetailsMeta.user.firstname.attributes}"
+                            encoding="off" />
+                        />
+                        <div class="invalid-feedback"></div>
+                    </div>
+
+                    <div class="col-md-6 form-group">
+                        <label class="form-control-label" for="lastName">
+                            <b>
+                                <isprint
+                                    value="${Resource.msg(pdict.userDetailsMeta.user.lastname.label, 'userlabels', null)}"
+                                    encoding="htmlcontent" /></b>
+                        </label>
+                        <input class="form-control" <isprint value="${pdict.userDetailsMeta.user.lastname.attributes}"
+                            encoding="off" />
+                        />
+                        <div class="invalid-feedback"></div>
+                    </div>
+
+                    <div class="col-md-6 form-group">
+                        <label class="form-control-label" for="email">
+                            <b>
+                                <isprint
+                                    value="${Resource.msg(pdict.userDetailsMeta.user.email.label, 'userlabels', null)}"
+                                    encoding="htmlcontent" /></b>
+                        </label>
+                        <input type="email" class="form-control" <isprint
+                            value="${pdict.userDetailsMeta.user.email.attributes}" encoding="off" />
+                        />
+                        <div class="invalid-feedback"></div>
+                    </div>
+
+                    <div class="col-md-6 form-group">
+                        <label class="form-control-label" for="amount">
+                            <b>
+                                <isprint
+                                    value="${Resource.msg(pdict.userDetailsMeta.user.amount.label, 'userlabels', null)}"
+                                    encoding="htmlcontent" /></b>
+                        </label>
+                        <input class="form-control" <isprint value="${pdict.userDetailsMeta.user.amount.attributes}"
+                            encoding="off" />
+                        />
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <input type="hidden" name="pid" value="${pdict.productID}" />
+                    <input type="hidden" name="quantity" value="1" />
+                    <input type="hidden" name="options" value="[]" />
+                    <div class="col-12 mt-3 text-right">
+                        <input type="hidden" class="add-to-cart-url" value="${pdict.addToCartUrl}">
+                        <button class="add-to-cart btn btn-primary" data-toggle="modal"
+                            data-target="#chooseBonusProductModal">
+                            <i class="fa fa-shopping-bag"></i>
+                            ${Resource.msg('text.donate', 'commonText', null)}
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            </form>
+        </div>
+    </div>
+
+</isdecorate>

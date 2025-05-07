@@ -8,17 +8,11 @@
     <div class="custom-footer">
         <div class="custom-footer-content1">
             <div class="custom-footer-item">
-                <img class="custom-footer-logo" src='${URLUtils.staticURL("/images/Logo-Mobile-Black.svg")}' alt="skinn-logo" />
+                <img class="custom-footer-logo" src='${URLUtils.staticURL("/images/Logo-Mobile-Black.svg")}' alt="skinn-logo" width=50 height=50 />
             </div>
-            <iscomment>
-                <div class="custom-footer-hr"></div>
-            </iscomment>
             <div class="custom-footer-item">
                 <iscontentasset aid="skinn-footer-help-section" />
             </div>
-            <iscomment>
-                <div class="custom-footer-hr"></div>
-            </iscomment>
             <div class="custom-footer-item">
                 <h5>${Resource.msg('text.footer.signup', 'commonText', null)}</h5>
                 <div class="custom-footer-email-container">

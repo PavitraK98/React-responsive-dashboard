@@ -1,0 +1,19 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/customTarte.css');
+</isscript>
+
+<div class="custom-tarte-header-navbar">
+    <nav>
+        <div class="logo">
+            <a class="logo-a" href="${URLUtils.url('Home-Show')}"
+                title="${Resource.msgf('global.homepage.tooltip', 'common', null, Resource.msg('global.storename', 'common', null), Resource.msg(
+                       'global.home', 'common', null))}">
+                <img class="hidden-md-down" src="${URLUtils.staticURL('/images/logo.svg')}"
+                    alt="${Resource.msg('global.storename', 'common', null)}" width=185 height=65 />
+                <img class="d-lg-none" src="${URLUtils.staticURL('/images/logo-small.svg')}"
+                    alt="${Resource.msg('global.storename', 'common', null)}" width=65 height=55 />
+            </a>
+        </div>
+    </nav>
+</div>

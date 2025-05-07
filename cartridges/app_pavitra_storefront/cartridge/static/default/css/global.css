@@ -18394,8 +18394,8 @@ div.availability {
   font-size: 0.928rem;
   min-width: 20rem;
   max-width: 15rem;
-  -webkit-transform: translate(-50%, calc(-1 * 1.25em / 2));
-          transform: translate(-50%, calc(-1 * 1.25em / 2));
+  -webkit-transform: translate(-50%, -0.625em);
+          transform: translate(-50%, -0.625em);
   left: 50%;
   margin-left: 4px;
   -webkit-animation: fade-in 0.5s linear forwards;
@@ -18427,8 +18427,8 @@ div.availability {
   width: 100%;
 }
 .info-icon .tooltip::after {
-  border-left: solid transparent calc(1.25em / 2); /* 10/16 */
-  border-right: solid transparent calc(1.25em / 2); /* 10/16 */
+  border-left: solid transparent 0.625em; /* 10/16 */
+  border-right: solid transparent 0.625em; /* 10/16 */
   border-top: solid #444 0.625em;
   bottom: -0.625em;
   content: " ";
@@ -19019,18 +19019,4 @@ div.availability {
 
 * {
   font-family: primary;
-}
-
-.carousel-inner {
-  width: unset !important;
-}
-
-.carousel-control-prev {
-  color: #000000;
-  background-color: transparent;
-}
-
-.carousel-control-next {
-  color: #000000;
-  background-color: transparent;
 }

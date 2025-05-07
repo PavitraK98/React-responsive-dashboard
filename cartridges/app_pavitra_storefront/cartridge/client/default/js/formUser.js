@@ -14,24 +14,17 @@ $(document).ready(function () {
       data: $this.serialize(),
       success: function (data) {
         console.log("Success:-----", data);
+        $('.form-container').hide();
         if (data?.objectResult?.check === true) {
-          $(".slot-container").html(`
-            <isslot id="new-email-confirmation"
-                    description="Displaying confirmation message to newly created emails."
-                    context="global"></isslot>
-        `);
+          $(".new-email-confirmation").show();
           $(".msg").text(data.objectResult.message);
         } else if (data?.objectResult?.check === false) {
-          $(".slot-container").html(`
-            <isslot id="existing-email-message"
-                    description="This slot is to display messages to an existing email."
-                    context="global"></isslot>
-          `);
+          $(".existing-email-message").show();
           $(".msg").text(data.objectResult.message);
         }
       },
-      error: function (xhr, status, error) {
-        console.log("Error:", status, error);
+      error: function (status) {
+        console.log("Error:", status, status.responseJSON.message);
         alert("Error submitting form. Please try again.");
       },
     });

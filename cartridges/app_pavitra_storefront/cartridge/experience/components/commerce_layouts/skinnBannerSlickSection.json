@@ -1,0 +1,27 @@
+{
+    "name": "Skinn banner section using slick",
+    "description": "This is a component that can displays about skinn offers with accompanying text",
+    "group": "commerce_layouts",
+    "attribute_definition_groups": [
+      {
+        "id": "banner",
+        "attribute_definitions": [
+          {
+            "id": "ImgTail1",
+            "type": "image",
+            "required": true
+          },
+          {
+            "id": "ImgTail2",
+            "type": "image",
+            "required": true
+          },{
+            "id": "ImgTail3",
+            "type": "image",
+            "required": true
+          }
+        ]
+      }
+    ],
+    "region_definitions": []
+  }

@@ -1,5 +1,0 @@
-<isinclude template="/components/header/pageHeaderStorefront" />
-<div role="main" id="maincontent">
-    <isreplace/>
-</div>
-<isinclude template="/components/footer/pageFooterStorefront" />

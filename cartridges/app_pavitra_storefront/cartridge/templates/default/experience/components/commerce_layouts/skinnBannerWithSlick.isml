@@ -1,0 +1,29 @@
+<isscript>
+        var assets = require('*/cartridge/scripts/assets');
+        assets.addJs('https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js');
+        assets.addCss('https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css');
+        assets.addCss('/css/customLayout.css');
+</isscript>
+<div class="skinnBannerWithSlick-container">
+    <div class="skinnBanner-img-container">
+        <picture>
+            <source media="(max-width: 480px)" srcset="${pdict.ImgTail1.src.mobile}" />
+            <source media="(max-width: 768px)" srcset="${pdict.ImgTail1.src.tablet}" />
+            <img class="skinn-banner-img" src="${pdict.ImgTail1.src.desktop}" alt="Image1" loading="lazy" />
+        </picture>
+    </div>
+    <div class="skinnBanner-img-container">
+        <picture>
+            <source media="(max-width: 480px)" srcset="${pdict.ImgTail2.src.mobile}" />
+            <source media="(max-width: 768px)" srcset="${pdict.ImgTail2.src.tablet}" />
+            <img class="skinn-banner-img" src="${pdict.ImgTail2.src.desktop}" alt="Image2" loading="lazy" />
+        </picture>
+    </div>
+    <div class="skinnBanner-img-container">
+        <picture>
+            <source media="(max-width: 480px)" srcset="${pdict.ImgTail3.src.mobile}" />
+            <source media="(max-width: 768px)" srcset="${pdict.ImgTail3.src.tablet}" />
+            <img class="skinn-banner-img" src="${pdict.ImgTail3.src.desktop}" alt="Image3" loading="lazy" />
+        </picture>
+    </div>
+</div>

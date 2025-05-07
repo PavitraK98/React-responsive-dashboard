@@ -1204,7 +1204,6 @@
 .experience-commerce_layouts-carousel .carousel-control-prev,
 .experience-commerce_layouts-carousel .carousel-control-next {
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.4);
   height: 4.6875rem;
   width: 3.125rem;
   top: 30%;

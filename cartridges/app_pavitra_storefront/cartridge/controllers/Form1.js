@@ -178,7 +178,7 @@ server.post(
       );
 
       if (validateCustomObj.objectType === "newObject") {
-        var emailTemplate = "components/emailContainer";
+        var emailTemplate = "Form/emailTemplate";
         triggerEmailHelper.triggerSendEmail(userDetails, emailTemplate);
         var objectResult = {
           object : validateCustomObj,

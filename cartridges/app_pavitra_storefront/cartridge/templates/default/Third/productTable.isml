@@ -1,0 +1,50 @@
+<isdecorate template="common/layout/page">
+    <iscontent type="text/html" charset="UTF-8" compact="true" />
+
+    <isif condition="${pdict.data.product.length !== null}">
+        <div class="card m-4">
+            <div class="card-body m-0 p-0">
+                <table class="table table-bordered">
+                    <tr>
+                        <th>${Resource.msg('Lable.item.id', 'product', null)}</th>
+                        <th>${Resource.msg('Label.item.name', 'product', null)}</th>
+                        <th>${Resource.msg('Label.item.brand', 'product', null)}</th>
+                        <th>${Resource.msg('Label.item.long.description', 'product', null)}</th>
+                        <th>${Resource.msg('Label.item.short.description', 'product', null)}</th>
+                        <th>${Resource.msg('Label.item.on.sale', 'product', null)}</th>
+                        <th>${Resource.msg('Label.item.new.arrival', 'product', null)}</th>
+                        <th>${Resource.msg('Label.price', 'product', null)}</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <isprint value="${pdict.data.product.id}" encoding="on" />
+                        </td>
+                        <td>
+                            <isprint value="${pdict.data.product.name}" encoding="on" />
+                        </td>
+                        <td>
+                            <isprint value="${pdict.data.product.brand}" encoding="on" />
+                        </td>
+                        <td>
+                            <isprint value="${pdict.data.product.longDiscription}" encoding="on" />
+                        </td>
+                        <td>
+                            <isprint value="${pdict.data.product.shortDiscription}" encoding="on" />
+                        </td>
+                        <td>
+                            <isprint value="${pdict.data.product.onSale ? pdict.data.product.onSale : false}"
+                                encoding="on" />
+                        </td>
+                        <td>
+                            <isprint value="${pdict.data.product.newArrival ? pdict.data.product.newArrival : false}"
+                                encoding="on" />
+                        </td>
+                        <td>
+                            <isprint value="${pdict.data.product.price}" encoding="on" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </isif>
+</isdecorate>
