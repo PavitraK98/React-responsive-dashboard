@@ -14,7 +14,7 @@ $(document).ready(function () {
       data: $this.serialize(),
       success: function (data) {
         console.log("Success:-----", data);
-        $('.form-container').hide();
+        $(".form-container").hide();
         if (data?.objectResult?.check === true) {
           $(".new-email-confirmation").show();
           $(".msg").text(data.objectResult.message);
@@ -30,3 +30,33 @@ $(document).ready(function () {
     });
   });
 });
+
+//---------donation form-------//
+// $(document).ready(function() {
+//   $('.user-donation-form').submit(function(e) {
+//       e.preventDefault();
+
+//       var $this = $(this);
+//       var addToCartUrl = $this.attr("action");
+//       var redirectUrl = $this.attr("redirect");
+
+//       $.ajax({
+//         url: addToCartUrl,
+//         type: 'POST',
+//         data: $this.serialize(),
+//         dataType: 'json',
+//         success: function(res) {
+//           console.log("Success:-----", res);
+//             if (res) {
+//                 alert('Donation added to cart successfully!');
+//             } else {
+//                 alert('Error: ' + (res || 'Unable to add donation to cart'));
+//             }
+//           },
+//           error: function(status) {
+//             console.log("Error:", status);
+//               alert('An error occurred: ' + status);
+//           }
+//       });
+//   });
+// });

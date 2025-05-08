@@ -69,3 +69,21 @@
     cursor: pointer;
   }
 }
+
+//------------trate custom checkout styles-----//
+
+#customTrateCheckout{
+  .cardHeader{
+    background-color: $close-menu-bg;
+    color: $black;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 500;
+  }
+  .card-body{
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+}

@@ -9,6 +9,7 @@
             missing-error="error.message.required"
             range-error="error.message.50orless"
             type="string"
+            required="true"
         />
 
         <field
@@ -19,6 +20,7 @@
             missing-error="error.message.required"
             range-error="error.message.50orless"
             type="string"
+                        required="true"
         />
 
         <field
@@ -30,6 +32,7 @@
             missing-error="error.message.required"
             parse-error="error.message.parse.email.profile.form"
             range-error="error.message.50orless"
+                        required="true"
         />
 
         <field
@@ -38,6 +41,7 @@
             label="user.label.donation.amount"
             mandatory="true"
             missing-error="error.message.required"
+                        required="true"
         />
 
      </group>
