@@ -15,6 +15,10 @@
         {
             "name": "app.payment.form.processor.basic_credit_p_c",
             "script": "./cartridge/scripts/hooks/payment/processor/basic_credit_form_processorPC"
+        },
+        {
+            "name": "dw.order.calculate",
+            "script": "./cartridge/scripts/hooks/cart/calculate.js"
         }
     ]
 }

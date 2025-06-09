@@ -1,0 +1,16 @@
+<div class="product-card-footer">
+    <isif condition="${!lineItem.isBonusProductLineItem}">
+            <!--- line item total price --->
+            <div class="line-item-total-price">
+                <h6>Amount</h6>
+                <div class="item-total-${lineItem.UUID} price">
+                    <h5>
+                    <isinclude template="checkout/productCard/productCardProductTotalPrice" />
+                    </h5>
+                </div>
+            </div>
+
+            <!--- extra slot for spacing reasons due to large remove button --->
+            <div class="col-lg-1 hidden-md-down remove-line-item-lg"></div>
+    </isif>
+</div>

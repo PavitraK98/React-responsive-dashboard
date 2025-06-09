@@ -1,0 +1,55 @@
+<isdecorate template="common/layout/checkout">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/customTarte.css');
+    </isscript>
+
+    <div class="container" id="customTrateCheckout">
+        <div class="row mt-5 mb-5">
+            <div class="col-sm-8">
+                <div class="tarte-shipping-methods">
+                    <div class="card">
+                        <div class="card-header cardHeader">
+                            Delivery Method
+                        </div>
+                        <div class="card-body">
+                            <isinclude template="trateCheckout/deliveryMethodSection/deliveryMethod" />
+                        </div>
+                    </div>
+                </div>
+                <div class="tarte-shipping-address">
+                    <div class="card">
+                        <div class="card-header cardHeader">
+                            Delivery Address
+                        </div>
+                        <div class="card-body">
+                            <isinclude template="trateCheckout/deliveryAddressSection/deliveryAddress" />
+                        </div>
+                    </div>
+                </div>
+                <div class="trate-payment">
+                    <div class="card">
+                        <div class="card-header cardHeader">
+                            Payment
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-header cardHeader d-flex flex-row justify-content-between align-items-center">
+                        <h2 class="card-header-custom">Summary</h2>
+                        <button type="button" class="btn">
+                                <img src='${URLUtils.staticURL("/images/left-arrow-black.png")}' alt="left-icon"
+                                    width="19" height="19" />
+                                BACK TO BAG
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <isinclude template="trateCheckout/orderProductSummary" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</isdecorate>

@@ -1,0 +1,35 @@
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/customStyling.css');
+    </isscript>
+
+<div class="blueCar-container">
+    <div class="blueCar-background">
+        <picture>
+            <source media="(max-width: 480px)" srcset="${URLUtils.staticURL('/images/mahindra electric.jpg')}" />
+            <source media="(max-width: 768px)" srcset="${URLUtils.staticURL('/images/mahindra electric.jpg')}" />
+            <img src="${URLUtils.staticURL('/images/mahindra electric.png')}" alt="Mahindra Electric" />
+        </picture>
+        <div class="overlay-content">
+            <div class="overlay-content-para">FLEET</div>
+            <h4 class="overlay-content-heading">SCORPIO-N 4XPLORE</h4>
+            <button type="button"
+                class="animated-button btn btn-primary book-now btn-block arrow-right revert-icon-theme">
+                <div class="face1 face">
+                    <svg class="icon">
+                        <use xlink:href="#icon-arrow-right-light" data-icon="dark"></use>
+                        <use xlink:href="#icon-arrow-right" data-icon="light"></use>
+                    </svg>
+                    Explore more
+                </div>
+                <div class="face2 face">
+                    <svg class="icon">
+                        <use xlink:href="#icon-arrow-right-light" data-icon="light"></use>
+                        <use xlink:href="#icon-arrow-right" data-icon="dark"></use>
+                    </svg>
+                    Explore more
+                </div>
+            </button>
+        </div>
+    </div>
+</div>

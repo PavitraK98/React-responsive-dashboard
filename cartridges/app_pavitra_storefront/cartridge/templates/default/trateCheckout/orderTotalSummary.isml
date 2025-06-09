@@ -1,0 +1,23 @@
+<div class="col">
+    <div class="row d-flex flex-column">
+        <div class="row d-flex justify-content-between align-items-center">
+            <h6>Subtotal</h6>
+            <p> ₹ 3,600.00</p>
+        </div>
+        <div class="row d-flex justify-content-between align-items-center">
+            <h6>Shipping & Handling</h6>
+            <p> ₹ 2,041.00</p>
+        </div>
+        <div class="row d-flex justify-content-between align-items-center">
+            <h6>Duty</h6>
+            <p> ₹ 308.80</p>
+        </div>
+    </div>
+    <hr class="w-100" />
+    <div class="row d-flex flex-column">
+        <div class="row d-flex justify-content-between align-items-center">
+            <h6><b>Total</b></h6>
+            <p><b>₹ 5,949.80</b></p>
+        </div>
+    </div>
+</div>

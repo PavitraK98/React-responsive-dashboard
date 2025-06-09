@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-sm-12 d-flex justify-content-between align-items-center">
+        <div class="col-sm-5 p-0 d-flex justify-content-left align-items-center">
+            <img src='${URLUtils.staticURL("/images/account.jpg")}' alt="original" width="125" height="105" />
+        </div>
+        <div class="col-sm-7 p-1 ml-3 d-flex flex-column justify-content-left">
+            <h6 class="p-0 m-0 lh-base text-break"><b>shape tape concealer</b></h6>
+            <p class="p-0 m-0 lh-base text-break">Qty: 1</p>
+            <p class="p-0 m-0 lh-base text-break">35N (medium)</p>
+            <p class="p-0 m-0 lh-base text-break">₹ 3,600.00</p>
+        </div>
+    </div>
+</div>
+    <hr class="w-100" />
+<div class="row">
+    <isinclude template="trateCheckout/orderTotalSummary" />
+</div>

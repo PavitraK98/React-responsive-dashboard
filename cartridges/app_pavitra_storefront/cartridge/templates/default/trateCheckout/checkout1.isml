@@ -1,0 +1,5 @@
+<isdecorate template="common/layout/checkout">
+    <isinclude template="/components/modules" sf-toolkit="on" />
+
+    <iscontentasset aid="custom-rsa-schema" />
+</isdecorate>

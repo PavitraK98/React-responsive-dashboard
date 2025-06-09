@@ -17,23 +17,32 @@ function createProductLineItemsObject(allLineItems, view) {
         if (!item.product) {
             lineItems.push({
                 id: item.productID,
-                quantity: item.quantity.value,
-                productName: item.productName,
                 UUID: item.UUID,
-                noProduct: true,
-                donationUser: item.productLineItem,
-                images:
-                {
-                    small: [
-                        {
-                            url: URLUtils.staticURL('/images/noimagelarge.png'),
-                            alt: Resource.msgf('msg.no.image', 'common', null),
-                            title: Resource.msgf('msg.no.image', 'common', null)
-                        }
-                    ]
-
-                }
-
+                productName: item.productName,
+                quantity: item.quantity.value,
+                isDonationProduct: true,
+                donation: {
+                    firstname: item.custom.donationFirstNameP,
+                    lastName: item.custom.donationLastNameP,
+                    email: item.custom.donationEmailP,
+                    amount: item.custom.donationAmountP
+                },
+                 price: {
+                    sales: {
+                        value: item.custom.donationAmountP || 0
+                    }
+                },
+                images: {
+                    small: [{
+                        url: URLUtils.staticURL('/images/noimagelarge.png'),
+                        alt: Resource.msgf('msg.no.image', 'common', null),
+                        title: Resource.msgf('msg.no.image', 'common', null)
+                    }]
+                },
+                options: [],
+                noProduct: !item.product,
+                isBonusProductLineItem: false,
+                bonusProducts: null
             });
             return;
         }
@@ -66,7 +75,7 @@ function createProductLineItemsObject(allLineItems, view) {
                         containerView: view,
                         lineItem: bonusItem,
                         options: bpliOptions,
-                        donationUser: item.productLineItem,
+                        product: item,
                     };
 
                     bonusProducts.push(ProductFactory.get(params));
@@ -82,7 +91,14 @@ function createProductLineItemsObject(allLineItems, view) {
             containerView: view,
             lineItem: item,
             options: options,
-            donationUser: item.productLineItem,
+            product: item,
+            isDonationProduct: item.custom.isDonationAddedP,
+            donationUserDetails: {
+                firstname: item.custom.donationFirstNameP,
+                lastName: item.custom.donationLastNameP,
+                email: item.custom.donationEmailP,
+                amount: item.custom.donationAmountP
+            }
         };
         var newLineItem = ProductFactory.get(params);
         newLineItem.bonusProducts = bonusProducts;

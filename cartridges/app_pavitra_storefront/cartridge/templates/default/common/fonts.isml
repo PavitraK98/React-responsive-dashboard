@@ -9,3 +9,15 @@
         font-display:swap;
     }
 </style>
+
+<link rel="preload" as="font" type="font/truetype" href="${URLUtils.staticURL('fonts/Gotham-Book.ttf')}" crossorigin/>
+
+<style>
+    @font-face {
+        font-family: "Gotham-Book";
+        src: url('${URLUtils.staticURL("fonts/Gotham-Book.ttf")}') format("ttf");
+        font-weight:100 900;
+        font-style:normal;
+        font-display:swap;
+    }
+</style>

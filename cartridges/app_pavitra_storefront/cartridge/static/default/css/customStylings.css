@@ -1,0 +1,143 @@
+#customCheckout {
+  margin-top: 100px;
+  color: #ffffff;
+  background-color: #000000;
+}
+#customCheckout container {
+  margin: 5px 0px;
+}
+#customCheckout #RSA-block h5 {
+  text-align: left;
+}
+#customCheckout #RSA-block .RSA-bock1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#customCheckout #RSA-block .RSA-bock1 .select-RSA-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+#customCheckout #RSA-block .RSA-bock1 .select-RSA-block fieldset {
+  border: 1px solid #ccc;
+  padding: 10px 12px 12px 12px;
+  border-radius: 6px;
+  position: relative;
+}
+#customCheckout #RSA-block .RSA-bock1 .select-RSA-block legend {
+  font-size: 14px;
+  padding: 0 6px;
+  color: #666;
+}
+#customCheckout #RSA-block .RSA-bock1 .select-RSA-block select {
+  width: 260px;
+  padding: 10px 10px;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  background-color: #000000;
+  color: #ffffff;
+}
+#customCheckout #RSA-block .RSA-bock1 .sos-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+#customCheckout #RSA-block .RSA-bock1 .sos-field p {
+  padding: 5px 9px;
+  background-color: gray;
+  color: #ffffff;
+  border-radius: 25px;
+}
+#customCheckout #RSA-block .RSA-block2 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+#customCheckout #RSA-block .RSA-block2 .gst-details {
+  background-color: #808080;
+  border-radius: 11px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 4px;
+}
+#customCheckout #RSA-block .RSA-block2 .gst-details .cust-details h6 {
+  letter-spacing: 3px;
+  word-break: break-all;
+}
+#customCheckout #RSA-block .RSA-block2 .gst-details .cust-details p {
+  letter-spacing: 2px;
+  word-break: break-all;
+  margin: 0;
+}
+#customCheckout #RSA-block .RSA-block3 input[type=checkbox] {
+  accent-color: #000;
+  width: 15px;
+  height: 15px;
+}
+#customCheckout #summery-block h5 {
+  text-align: left;
+}
+#customCheckout #summery-block .summaryCard {
+  background-color: #808080;
+  border-color: 1px solid #808080;
+  border-radius: 15px;
+}
+#customCheckout #summery-block .summaryCard .summryBody {
+  padding: 15px 15px;
+}
+#customCheckout #summery-block .summaryCard .summryBody .line-blocks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#customCheckout #summery-block .summaryCard .summryBody .line-blocks .left-text {
+  line-height: 25px;
+  margin: 0;
+}
+#customCheckout #summery-block .summaryCard .summryBody .line-blocks .right-text {
+  line-height: 25px;
+  margin: 0;
+}

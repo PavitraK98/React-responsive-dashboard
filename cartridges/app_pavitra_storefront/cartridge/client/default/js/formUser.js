@@ -31,32 +31,82 @@ $(document).ready(function () {
   });
 });
 
+function handlePostCartAdd(response) {
+  $(".minicart").trigger("count:update", response);
+  var messageType = response.error ? "alert-danger" : "alert-success";
+  if (
+    response.newBonusDiscountLineItem &&
+    Object.keys(response.newBonusDiscountLineItem).length !== 0
+  ) {
+    chooseBonusProducts(response.newBonusDiscountLineItem);
+  } else {
+    if ($(".add-to-cart-messages").length === 0) {
+      $("body").append('<div class="add-to-cart-messages"></div>');
+    }
+
+    $(".add-to-cart-messages").append(
+      '<div class="alert ' +
+        messageType +
+        ' add-to-basket-alert text-center" role="alert">' +
+        response.message +
+        "</div>"
+    );
+
+    setTimeout(function () {
+      $(".add-to-basket-alert").remove();
+    }, 5000);
+  }
+}
+
+function miniCartReportingUrl(url) {
+  if (url) {
+    $.ajax({
+      url: url,
+      method: "GET",
+      success: function () {
+        // reporting urls hit on the server
+      },
+      error: function () {
+        // no reporting urls hit on the server
+      },
+    });
+  }
+}
+
 //---------donation form-------//
-// $(document).ready(function() {
-//   $('.user-donation-form').submit(function(e) {
-//       e.preventDefault();
+$(document).ready(function () {
+  $(".user-donation-form").on("submit", function (e) {
+    e.preventDefault();
 
-//       var $this = $(this);
-//       var addToCartUrl = $this.attr("action");
-//       var redirectUrl = $this.attr("redirect");
+    var $form = $(this);
+    var $donateButton = $form.find("#donateButton");
+    var url = $donateButton.data("url");
+    var formData = $form.serialize();
 
-//       $.ajax({
-//         url: addToCartUrl,
-//         type: 'POST',
-//         data: $this.serialize(),
-//         dataType: 'json',
-//         success: function(res) {
-//           console.log("Success:-----", res);
-//             if (res) {
-//                 alert('Donation added to cart successfully!');
-//             } else {
-//                 alert('Error: ' + (res || 'Unable to add donation to cart'));
-//             }
-//           },
-//           error: function(status) {
-//             console.log("Error:", status);
-//               alert('An error occurred: ' + status);
-//           }
-//       });
-//   });
-// });
+    $.spinner().start();
+    $donateButton.prop("disabled", true);
+
+    $.ajax({
+      url: url,
+      type: "POST",
+      data: formData,
+      success: function (res) {
+        if (res) {
+          $form[0].reset();
+          $('.minicart-quantity').empty().append(res.quantityTotal);
+          // $("body").trigger("product:afterAddToCart", res);
+          miniCartReportingUrl(res.reportingURL);
+          handlePostCartAdd(res);
+
+          $donateButton.prop("disabled", false);
+          $.spinner().stop();
+        }
+      },
+      error: function (error) {
+        console.log("Error:", error);
+        $.spinner().stop();
+        $donateButton.prop("disabled", false);
+      },
+    });
+  });
+});

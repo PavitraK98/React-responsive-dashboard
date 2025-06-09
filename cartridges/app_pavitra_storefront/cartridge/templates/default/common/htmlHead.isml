@@ -41,8 +41,16 @@
         font-style:normal;
         font-display:swap;
     }
+    @font-face {
+        font-family: "Gotham-Book";
+        src: url('${URLUtils.staticURL("fonts/Gotham-Book.ttf")}') format("ttf");
+        font-weight:100 900;
+        font-style:normal;
+        font-display:swap;
+    }
 </style>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
 <link rel="stylesheet" href="${URLUtils.staticURL('/css/global.css')}" />
 <isloop items="${ require('*/cartridge/scripts/assets.js').styles }" var="style">
     <link rel="stylesheet" href="${style.src}" <isif condition="${style.integrity != null}"> integrity="${style.integrity}" crossorigin="anonymous"</isif> />

@@ -9,6 +9,8 @@
     <div class="home-main homepage">
         <isslot id="home-main-m" description="Main home page slot." context="global" />
     </div>
+<h2>Hellooo</h2>
+    <isinclude template="Home/mahindraBlue" sf-toolkit="on" />
 
     <div class="container home-categories homepage">
         <div class="row home-main-categories no-gutters">

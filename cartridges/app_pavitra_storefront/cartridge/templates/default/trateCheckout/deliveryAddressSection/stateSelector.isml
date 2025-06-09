@@ -1,0 +1,106 @@
+<div class="form-group">
+    <select class="form-control custom-select" placeholder="* State/Province" name="stateCode" required>
+        <option value="">Select State/Province</option>
+
+        <!-- United States -->
+        <optgroup label="United States">
+            <option value="AL">Alabama</option>
+            <option value="AK">Alaska</option>
+            <option value="AZ">Arizona</option>
+            <option value="AR">Arkansas</option>
+            <option value="CA">California</option>
+            <option value="CO">Colorado</option>
+            <option value="CT">Connecticut</option>
+            <!-- Add remaining US states as needed -->
+        </optgroup>
+
+        <!-- Canada -->
+        <optgroup label="Canada">
+            <option value="AB">Alberta</option>
+            <option value="BC">British Columbia</option>
+            <option value="MB">Manitoba</option>
+            <option value="NB">New Brunswick</option>
+            <option value="NL">Newfoundland and Labrador</option>
+            <option value="NT">Northwest Territories</option>
+            <option value="NS">Nova Scotia</option>
+            <option value="NU">Nunavut</option>
+            <option value="ON">Ontario</option>
+            <option value="PE">Prince Edward Island</option>
+            <option value="QC">Quebec</option>
+            <option value="SK">Saskatchewan</option>
+            <option value="YT">Yukon</option>
+        </optgroup>
+
+        <!-- United Kingdom -->
+        <optgroup label="United Kingdom">
+            <option value="ENG">England</option>
+            <option value="SCT">Scotland</option>
+            <option value="WLS">Wales</option>
+            <option value="NIR">Northern Ireland</option>
+        </optgroup>
+
+        <!-- Australia -->
+        <optgroup label="Australia">
+            <option value="ACT">Australian Capital Territory</option>
+            <option value="NSW">New South Wales</option>
+            <option value="NT">Northern Territory</option>
+            <option value="QLD">Queensland</option>
+            <option value="SA">South Australia</option>
+            <option value="TAS">Tasmania</option>
+            <option value="VIC">Victoria</option>
+            <option value="WA">Western Australia</option>
+        </optgroup>
+
+        <!-- Germany -->
+        <optgroup label="Germany">
+            <option value="BW">Baden-Württemberg</option>
+            <option value="BY">Bavaria</option>
+            <option value="BE">Berlin</option>
+            <option value="BB">Brandenburg</option>
+            <option value="HB">Bremen</option>
+            <option value="HH">Hamburg</option>
+            <option value="HE">Hesse</option>
+            <option value="MV">Mecklenburg-Vorpommern</option>
+            <option value="NI">Lower Saxony</option>
+            <option value="NW">North Rhine-Westphalia</option>
+            <option value="RP">Rhineland-Palatinate</option>
+            <option value="SL">Saarland</option>
+            <option value="SN">Saxony</option>
+            <option value="ST">Saxony-Anhalt</option>
+            <option value="SH">Schleswig-Holstein</option>
+            <option value="TH">Thuringia</option>
+        </optgroup>
+
+        <!-- France -->
+        <optgroup label="France">
+            <option value="ARA">Auvergne-Rhône-Alpes</option>
+            <option value="BFC">Bourgogne-Franche-Comté</option>
+            <option value="BRE">Brittany</option>
+            <option value="CVL">Centre-Val de Loire</option>
+            <option value="COR">Corsica</option>
+            <option value="GES">Grand Est</option>
+            <option value="HDF">Hauts-de-France</option>
+            <option value="IDF">Île-de-France</option>
+            <option value="NOR">Normandy</option>
+            <option value="NAQ">Nouvelle-Aquitaine</option>
+            <option value="OCC">Occitanie</option>
+            <option value="PDL">Pays de la Loire</option>
+            <option value="PAC">Provence-Alpes-Côte d'Azur</option>
+        </optgroup>
+
+        <!-- Japan -->
+        <optgroup label="Japan">
+            <option value="01">Hokkaido</option>
+            <option value="02">Aomori</option>
+            <option value="03">Iwate</option>
+            <option value="04">Miyagi</option>
+            <option value="05">Akita</option>
+            <option value="06">Yamagata</option>
+            <option value="07">Fukushima</option>
+            <option value="08">Ibaraki</option>
+            <option value="09">Tochigi</option>
+            <option value="10">Gunma</option>
+            <!-- Add remaining Japanese prefectures as needed -->
+        </optgroup>
+    </select>
+</div>

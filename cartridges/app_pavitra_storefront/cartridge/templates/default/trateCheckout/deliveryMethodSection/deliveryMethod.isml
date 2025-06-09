@@ -1,0 +1,26 @@
+<p class="delivery-method-warn-text">Heads up, tartelette! Due to high order volume, you may experience a delay in your
+    selected shipping time. We apologize for any inconvenience.</p>
+<div class="row d-flex justify-content-center align-items-center">
+        <div class="col-sm-12 border border-dark p-2 mb-3">
+            <div class="form-check">
+                <input class="form-check-input mt-3" type="radio" name="Standard Delivery"
+                    checked />
+                <label class="form-check-label pl-2" for="radioDefault1">
+                    <h6 class="lh-sm p-0 m-0">
+                    <b>Standard Delivery: 2,041.00</b></h6>
+                    <p class="lh-sm p-0 m-0">Delivery between Thu, 22 May and Thu, 29 May</p>
+                </label>
+            </div>
+        </div>
+
+         <div class="col-sm-12 border border-secondary-subtle p-2">
+            <div class="form-check">
+                <input class="form-check-input mt-3" type="radio" name="EXPRESS Delivery" />
+                <label class="form-check-label pl-2" for="radioDefault1">
+                    <h6 class="lh-sm p-0 m-0">
+                    <b>EXPRESS Delivery: 2,600.00</b></h6>
+                    <p class="lh-sm p-0 m-0">Delivery between Thu, 14 May and Mon, 19 May</p>
+                </label>
+            </div>
+        </div>
+</div>

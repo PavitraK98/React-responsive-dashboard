@@ -13,7 +13,7 @@ server.get("Show", function (req, res, next) {
   var redirectURL = URLUtils.url('Cart-Show');
   var addToCartUrl = URLUtils.url('Cart-AddProduct');
 
-  res.render("Donation/Form", {
+  res.render("Donation/form", {
     addToCartUrl: addToCartUrl,
     redirectURL: redirectURL,
     userDetailsMeta: userDetailsMetaData,

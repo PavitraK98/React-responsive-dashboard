@@ -15,11 +15,11 @@
         ${dw.system.HookMgr.callHook('app.template.beforeHeader', 'beforeHeader', pdict) || ''}
 
         <div class="page">
-            <isinclude template="/components/header/tarteHeader" />
+            <isinclude template="/components/header/pageHeaderNomenu" />
             <div role="main" id="maincontent">
                 <isreplace/>
             </div>
-            <isinclude template="/components/footer/tarteFooter" />
+            <isinclude template="/components/footer/pageFooterStorefront" />
         </div>
         <!--[if lt IE 10]>
             <isinclude sf-toolkit="off" template="/common/scripts" />

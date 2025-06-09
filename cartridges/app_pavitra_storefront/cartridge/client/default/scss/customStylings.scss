@@ -1,0 +1,122 @@
+@import "./variables";
+
+
+#customCheckout {
+  margin-top: 100px;
+  color: #ffffff;
+  background-color: #000000;
+  container {
+    margin: 5px 0px;
+  }
+  #RSA-block {
+    // background-color: yellow;
+    h5 {
+      text-align: left;
+    }
+    .RSA-bock1 {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      // background-color: palevioletred;
+      .select-RSA-block {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        // background-color: darkorange;
+        fieldset {
+          border: 1px solid #ccc;
+          padding: 10px 12px 12px 12px;
+          border-radius: 6px;
+          position: relative;
+        }
+        legend {
+          font-size: 14px;
+          padding: 0 6px;
+          color: #666;
+        }
+        select {
+          width: 260px;
+          padding: 10px 10px;
+          border: 1px solid #ffffff;
+          border-radius: 4px;
+          background-color: #000000;
+          color: #ffffff;
+        }
+      }
+      .sos-field {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        // background-color: aqua;
+        p {
+          padding: 5px 9px;
+          background-color: gray;
+          color: #ffffff;
+          border-radius: 25px;
+        }
+      }
+    }
+    .RSA-block2 {
+      margin-top: 5px;
+      margin-bottom: 5px;
+      .gst-details {
+        background-color: #808080;
+        border-radius: 11px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 4px;
+        .cust-details {
+          h6 {
+            letter-spacing: 3px;
+            word-break: break-all;
+          }
+          p {
+            letter-spacing: 2px;
+            word-break: break-all;
+            margin: 0;
+          }
+        }
+      }
+    }
+    .RSA-block3 {
+      input[type="checkbox"] {
+        accent-color: $black;
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+  #summery-block {
+    h5 {
+      text-align: left;
+    }
+    .summaryCard {
+      background-color: #808080;
+      border-color: 1px solid #808080;
+      border-radius: 15px;
+      .summryBody {
+        padding: 15px 15px;
+        .line-blocks {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .left-text {
+            line-height: 25px;
+            margin: 0;
+          }
+          .right-text {
+            line-height: 25px;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}

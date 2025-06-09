@@ -45,9 +45,7 @@ function Authorize(orderNumber, paymentInstrument, paymentProcessor) {
       try {
         Transaction.wrap(function () {
           paymentInstrument.paymentTransaction.setTransactionID(orderNumber);
-          paymentInstrument.paymentTransaction.setPaymentProcessor(
-            paymentProcessor
-          );
+          paymentInstrument.paymentTransaction.setPaymentProcessor(paymentProcessor);
         });
       } catch (e) {
         error = true;

@@ -1,0 +1,12 @@
+<div class="container p-3">
+    <h2 class="text-success">
+       Thank You for Your Donation!
+    </h2>
+    <p>We sincerely appreciate your generous donation.Your support helps us continue our mission and make a real impact.
+    </p>
+    <p>Every contribution matters, and we are incredibly grateful for your kindness and commitment.
+    </p>
+    <p>If you have any questions or need further information, please don't hesitate to contact us at<a href="mailto:support@refarch.org">support@refarch.org</a></p>
+    <p>With warm regards,</p>
+    <p>The RefArch Team</p>
+</div>

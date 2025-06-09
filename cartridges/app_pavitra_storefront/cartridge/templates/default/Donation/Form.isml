@@ -1,9 +1,11 @@
 <isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets');
+        assets.addJs('/js/formUser.js');
+</isscript>
     <div class="container mt-4 mb-4">
         <div class="card p-4">
-            <form class="user-donation-form" action="${pdict.addToCartUrl}" method="post" <isprint
-                value="${pdict.userDetailsMeta.attributes}" encoding="off" />>
-
+            <form class="user-donation-form" <isprint value="${pdict.userDetailsMeta.attributes}" encoding="off" />>
             <div class="form-container container">
                 <div class="row justify-content-center mb-4">
                     <div class="col-12 text-center">
@@ -60,8 +62,8 @@
                                     value="${Resource.msg(pdict.userDetailsMeta.user.amount.label, 'userlabels', null)}"
                                     encoding="htmlcontent" /></b>
                         </label>
-                        <input class="form-control" <isprint value="${pdict.userDetailsMeta.user.amount.attributes}"
-                            encoding="off" />
+                        <input class="form-control" type="number" <isprint
+                            value="${pdict.userDetailsMeta.user.amount.attributes}" encoding="off" />
                         />
                         <div class="invalid-feedback"></div>
                     </div>
@@ -71,11 +73,13 @@
                     <input type="hidden" name="options" value="[]" />
                 </div>
             </div>
-              <div class="col-12 mt-3 text-right">
-                    <button type="submit" class="add-to-cart btn btn-primary">
-                        ${Resource.msg('text.donate', 'commonText', null)}
-                    </button>
-                </div>
+            <div class="col-12 mt-3 text-right">
+                <button id="donateButton" type="submit" class="btn btn-primary"
+                    data-url="${URLUtils.url('Cart-AddProduct')}"
+                    data-minicart-url="${URLUtils.url('Cart-MiniCart').toString()}">
+                    ${Resource.msg('text.donate', 'commonText', null)}
+                </button>
+            </div>
             </form>
         </div>
     </div>

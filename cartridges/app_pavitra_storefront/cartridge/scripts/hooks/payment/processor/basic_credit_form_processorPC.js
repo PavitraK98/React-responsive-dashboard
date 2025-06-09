@@ -2,13 +2,6 @@
 
 var COHelpers = require('*/cartridge/scripts/checkout/checkoutHelpers');
 
-/**
- * Verifies the required information for billing form is provided.
- * @param {Object} req - The request object
- * @param {Object} paymentForm - the payment form
- * @param {Object} viewFormData - object contains billing form data
- * @returns {Object} an object that has error information or payment information
- */
 function processForm(req, paymentForm, viewFormData) {
     var array = require('*/cartridge/scripts/util/array');
 
@@ -34,27 +27,27 @@ function processForm(req, paymentForm, viewFormData) {
 
     viewData.paymentInformation = {
         cardType: {
-            value: paymentForm.creditCardFields.cardType.value,
-            htmlName: paymentForm.creditCardFields.cardType.htmlName
+            value: paymentForm.creditCardPCFields.cardType.value,
+            htmlName: paymentForm.creditCardPCFields.cardType.htmlName
         },
         cardNumber: {
-            value: paymentForm.creditCardFields.cardNumber.value,
-            htmlName: paymentForm.creditCardFields.cardNumber.htmlName
+            value: paymentForm.creditCardPCFields.cardNumber.value,
+            htmlName: paymentForm.creditCardPCFields.cardNumber.htmlName
         },
         securityCode: {
-            value: paymentForm.creditCardFields.securityCode.value,
-            htmlName: paymentForm.creditCardFields.securityCode.htmlName
+            value: paymentForm.creditCardPCFields.securityCode.value,
+            htmlName: paymentForm.creditCardPCFields.securityCode.htmlName
         },
         expirationMonth: {
             value: parseInt(
-                paymentForm.creditCardFields.expirationMonth.selectedOption,
+                paymentForm.creditCardPCFields.expirationMonth.selectedOption,
                 10
             ),
-            htmlName: paymentForm.creditCardFields.expirationMonth.htmlName
+            htmlName: paymentForm.creditCardPCFields.expirationMonth.htmlName
         },
         expirationYear: {
-            value: parseInt(paymentForm.creditCardFields.expirationYear.value, 10),
-            htmlName: paymentForm.creditCardFields.expirationYear.htmlName
+            value: parseInt(paymentForm.creditCardPCFields.expirationYear.value, 10),
+            htmlName: paymentForm.creditCardPCFields.expirationYear.htmlName
         }
     };
 
@@ -62,7 +55,7 @@ function processForm(req, paymentForm, viewFormData) {
         viewData.storedPaymentUUID = req.form.storedPaymentUUID;
     }
 
-    viewData.saveCard = paymentForm.creditCardFields.saveCard.checked;
+    viewData.saveCard = paymentForm.creditCardPCFields.saveCard.checked;
 
     // process payment information
     if (viewData.storedPaymentUUID
@@ -88,12 +81,6 @@ function processForm(req, paymentForm, viewFormData) {
     };
 }
 
-/**
- * Save the credit card information to login account if save card option is selected
- * @param {Object} req - The request object
- * @param {dw.order.Basket} basket - The current basket
- * @param {Object} billingData - payment information
- */
 function savePaymentInformation(req, basket, billingData) {
     var CustomerMgr = require('dw/customer/CustomerMgr');
 
@@ -101,7 +88,7 @@ function savePaymentInformation(req, basket, billingData) {
         && req.currentCustomer.raw.authenticated
         && req.currentCustomer.raw.registered
         && billingData.saveCard
-        && (billingData.paymentMethod.value === 'CREDIT_CARD')
+        && (billingData.paymentMethod.value === 'CREDIT_CARD_P_C')
     ) {
         var customer = CustomerMgr.getCustomerByCustomerNumber(
             req.currentCustomer.profile.customerNo

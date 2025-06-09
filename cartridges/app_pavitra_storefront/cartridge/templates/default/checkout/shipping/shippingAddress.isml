@@ -5,30 +5,21 @@
     <isset name="shippingAddress" value="${{}}" scope="page" />
 </isif>
 
-
 <div class="row">
-    <div class="col-sm-12 mb-3">
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="notification" />
-            <label class="form-check-label" for="radioDefault1">
-                <p class="lh-sm p-0 m-0">Yes, I expressly consent to receive emails from Tarte!
-                    You can unsubscribe any time by emailing info@tarte.com or clicking the link at the bottom of our emails. <a href="#" class="text-decoration-underline">Privacy Policy</a> and <a href="#" class="text-decoration-underline">Terms & Conditions</a></p>
-            </label>
-        </div>
-    </div>
     <div class="col-sm-6">
         <div class="form-group
             ${addressFields.firstName.mandatory === true ? 'required' : ''}
             ${addressFields.firstName.htmlName}">
-            <label class="form-control-label" for="shippingFirstName${lineItem ? lineItem.UUID : 'default'}">
-                ${Resource.msg('field.shipping.address.first.name', 'address', null)}
-            </label>
+            <iscomment> <label class="form-control-label"
+                    for="shippingFirstName${lineItem ? lineItem.UUID : 'default'}">
+                    ${Resource.msg('field.shipping.address.first.name', 'address', null)}
+                </label> </iscomment>
             <input autofocus type="text" class="form-control shippingFirstName"
                 id="shippingFirstName${lineItem ? lineItem.UUID : 'default'}"
                 aria-describedby="${lineItem ? lineItem.UUID : 'default'}FirstName"
                 value="${shippingAddress.firstName || ''}" <isprint value="${addressFields.firstName.attributes}"
-                encoding="off" /> placeholder="* First Name"
-            autocomplete="shipping given-name" />
+                encoding="off" />
+            autocomplete="shipping given-name" placeholder="* First name" />
             <div class="invalid-feedback" id="${lineItem ? lineItem.UUID : 'default'}FirstName">
                 <isprint value="${addressFields.firstName.error}" />
             </div>
@@ -38,17 +29,17 @@
         <div class="form-group
             ${addressFields.lastName.mandatory === true ? 'required' : ''}
             ${addressFields.lastName.htmlName}">
-            <label class="form-control-label" for="shippingLastName${lineItem ? lineItem.UUID : 'default'}">
-                ${Resource.msg('field.shipping.address.last.name', 'address', null)}
-            </label>
+            <iscomment> <label class="form-control-label" for="shippingLastName${lineItem ? lineItem.UUID : 'default'}">
+                    ${Resource.msg('field.shipping.address.last.name', 'address', null)}
+                </label> </iscomment>
             <input type="text" class="form-control shippingLastName"
                 id="shippingLastName${lineItem ? lineItem.UUID : 'default'}"
                 aria-describedby="${lineItem ? lineItem.UUID : 'default'}LastName"
                 value="${shippingAddress.lastName || ''}" <isprint value="${addressFields.lastName.attributes}"
-                encoding="off" /> placeholder="* Last Name"
-            autocomplete="shipping family-name" />
+                encoding="off" />
+            autocomplete="shipping family-name" placeholder="* Last name" />
             <div class="invalid-feedback" id="${lineItem ? lineItem.UUID : 'default'}LastName">
-                <isprint value="${addressFields.lastName.error}" />
+                <isprint value="${addressFields.lastName.error}">
             </div>
         </div>
     </div>
@@ -59,15 +50,16 @@
         <div class="form-group
             ${addressFields.address1.mandatory === true ? 'required' : ''}
             ${addressFields.address1.htmlName}">
-            <label class="form-control-label" for="shippingAddressOne${lineItem ? lineItem.UUID : 'default'}">
-                ${Resource.msg('field.shipping.address.one', 'address', null)}
-            </label>
+            <iscomment> <label class="form-control-label"
+                    for="shippingAddressOne${lineItem ? lineItem.UUID : 'default'}">
+                    ${Resource.msg('field.shipping.address.one', 'address', null)}
+                </label> </iscomment>
             <input type="text" class="form-control shippingAddressOne"
                 id="shippingAddressOne${lineItem ? lineItem.UUID : 'default'}"
                 aria-describedby="${lineItem ? lineItem.UUID : 'default'}AddressLine1"
                 value="${shippingAddress.address1 || ''}" <isprint value="${addressFields.address1.attributes}"
-                encoding="off" /> placeholder="* Address Line 1"
-            autocomplete="shipping address-line1" />
+                encoding="off" />
+            autocomplete="shipping address-line1" placeholder="* Address 1" />
             <div class="invalid-feedback" id="${lineItem ? lineItem.UUID : 'default'}AddressLine1">
                 <isprint value="${addressFields.address1.error}" />
             </div>
@@ -81,15 +73,16 @@
         <div class="form-group
             ${addressFields.address2.mandatory === true ? 'required' : ''}
             ${addressFields.address2.htmlName}">
-            <label class="form-control-label" for="shippingAddressTwo${lineItem ? lineItem.UUID : 'default'}">
-                ${Resource.msg('field.shipping.address.two', 'address', null)}
-            </label>
+            <iscomment> <label class="form-control-label"
+                    for="shippingAddressTwo${lineItem ? lineItem.UUID : 'default'}">
+                    ${Resource.msg('field.shipping.address.two', 'address', null)}
+                </label> </iscomment>
             <input type="text" class="form-control shippingAddressTwo"
                 id="shippingAddressTwo${lineItem ? lineItem.UUID : 'default'}"
                 aria-describedby="${lineItem ? lineItem.UUID : 'default'}AddressLine2"
                 value="${shippingAddress.address2 || ''}" <isprint value="${addressFields.address2.attributes}"
-                encoding="off" /> placeholder="* Address Line 2"
-            autocomplete="shipping address-line2" />
+                encoding="off" />
+            autocomplete="shipping address-line2" placeholder="* Address 2" />
             <div class="invalid-feedback" id="${lineItem ? lineItem.UUID : 'default'}AddressLine2">
                 <isprint value="${addressFields.address2.error}" />
             </div>
@@ -103,21 +96,22 @@
         <div class="form-group
             ${addressFields.country.mandatory === true ? 'required' : ''}
             ${addressFields.country.htmlName}">
-            <label class="form-control-label" for="shippingCountry${lineItem ? lineItem.UUID : 'default'}">
-                ${Resource.msg('field.shipping.address.country', 'address', null)}
-            </label>
+            <iscomment> <label class="form-control-label" for="shippingCountry${lineItem ? lineItem.UUID : 'default'}">
+                    ${Resource.msg('field.shipping.address.country', 'address', null)}
+                </label> </iscomment>
             <select class="form-control shippingCountry custom-select"
                 id="shippingCountry${lineItem ? lineItem.UUID : 'default'}" <isprint
                 value=${addressFields.country.attributes} encoding="off" />
-            autocomplete="shipping country" placeholder="* Country"
+            autocomplete="shipping country"
             aria-describedby="${lineItem ? lineItem.UUID : 'default'}Country">
             <option label=" "></option>
             <isloop items=${addressFields.country.options} var="country">
+                <option selected>* Select country</option>
                 <option id="${country.id}" value="${country.htmlValue}" ${shippingAddress.countryCode && country.id === shippingAddress.countryCode.value ? 'selected' : ''}>${country.label}</option>
             </isloop>
             </select>
             <div class="invalid-feedback" id="${lineItem ? lineItem.UUID : 'default'}Country">
-                <isprint value="${addressFields.country.error}" />
+                <isprint value="${addressFields.country.error}">
             </div>
         </div>
     </div>
@@ -125,13 +119,13 @@
         <div class="form-group
             ${addressFields.states.stateCode.mandatory === true ? 'required' : ''}
             ${addressFields.states.stateCode.htmlName}">
-            <label class="form-control-label" for="shippingState${lineItem ? lineItem.UUID : 'default'}">
-                ${Resource.msg('field.shipping.address.state', 'address', null)}
-            </label>
+            <iscomment> <label class="form-control-label" for="shippingState${lineItem ? lineItem.UUID : 'default'}">
+                    ${Resource.msg('field.shipping.address.state', 'address', null)}
+                </label> </iscomment>
             <select class="form-control shippingState custom-select"
                 id="shippingState${lineItem ? lineItem.UUID : 'default'}" <isprint
                 value=${addressFields.states.stateCode.attributes} encoding="off" />
-            autocomplete="shipping address-level1" placeholder="* State"
+            autocomplete="shipping address-level1"
             aria-describedby="${lineItem ? lineItem.UUID : 'default'}State">
             <isloop items=${addressFields.states.stateCode.options} var="state">
                 <option id="${state.id}" value="${state.htmlValue}" ${state.id === shippingAddress.stateCode ? 'selected' : ''}>${state.label || ' '}</option>
@@ -149,14 +143,15 @@
         <div class="form-group
             ${addressFields.city.mandatory === true ? 'required' : ''}
             ${addressFields.city.htmlName}">
-            <label class="form-control-label" for="shippingAddressCity${lineItem ? lineItem.UUID : 'default'}">
-                ${Resource.msg('field.shipping.address.city', 'address', null)}
-            </label>
+            <iscomment> <label class="form-control-label"
+                    for="shippingAddressCity${lineItem ? lineItem.UUID : 'default'}">
+                    ${Resource.msg('field.shipping.address.city', 'address', null)}
+                </label> </iscomment>
             <input type="text" class="form-control shippingAddressCity"
                 id="shippingAddressCity${lineItem ? lineItem.UUID : 'default'}"
-                aria-describedby="${lineItem ? lineItem.UUID : 'default'}City" value="${shippingAddress.city || ''}" placeholder="* City"
+                aria-describedby="${lineItem ? lineItem.UUID : 'default'}City" value="${shippingAddress.city || ''}"
                 <isprint value="${addressFields.city.attributes}" encoding="off" />
-            autocomplete="shipping address-level2" />
+            autocomplete="shipping address-level2" placeholder="* City" />
             <div class="invalid-feedback" id="${lineItem ? lineItem.UUID : 'default'}City">
                 <isprint value="${addressFields.city.error}" />
             </div>
@@ -166,15 +161,15 @@
         <div class="form-group
             ${addressFields.postalCode.mandatory === true ? 'required' : ''}
             ${addressFields.postalCode.htmlName}">
-            <label class="form-control-label" for="shippingZipCode${lineItem ? lineItem.UUID : 'default'}">
-                ${Resource.msg('field.shipping.address.zip.code', 'address', null)}
-            </label>
+            <iscomment> <label class="form-control-label" for="shippingZipCode${lineItem ? lineItem.UUID : 'default'}">
+                    ${Resource.msg('field.shipping.address.zip.code', 'address', null)}
+                </label> </iscomment>
             <input type="text" class="form-control shippingZipCode"
                 id="shippingZipCode${lineItem ? lineItem.UUID : 'default'}"
                 aria-describedby="${lineItem ? lineItem.UUID : 'default'}ZipCode"
                 value="${shippingAddress.postalCode || ''}" <isprint value="${addressFields.postalCode.attributes}"
-                encoding="off" /> placeholder="* Postal Code"
-            autocomplete="shipping postal-code" />
+                encoding="off" />
+            autocomplete="shipping postal-code" placeholder="* ZIP code" />
             <div class="invalid-feedback" id="${lineItem ? lineItem.UUID : 'default'}ZipCode">
                 <isprint value="${addressFields.postalCode.error}" />
             </div>
@@ -183,33 +178,73 @@
     </div>
 </div>
 
+<div class="row mb-3">
+    <div class="col-sm-4">
+        <div class="region-section">
+            <p>* Country/Region <br /> <span class="ml-3">United States</span></p>
+            <img src='${URLUtils.staticURL("/images/info.png")}' alt="original" width="20" height="20" />
+        </div>
+    </div>
+</div>
+
 <div class="row">
- <div class="col-sm-12 mb-3">
+    <div class="col-sm-12">
         <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="saveAddress" />
-            <label class="form-check-label" for="radioDefault1">
-                <p class="lh-sm p-0 m-0">Save this address for my next purchase.</p>
+            <input class="form-check-input mt-1" type="checkbox" value="saveAddress" />
+            <label class="form-check-label" for="saveAddress">
+                <p class="lh-sm ml-2">Save this address for my next purchase.</p>
             </label>
         </div>
     </div>
-    <div class="col-sm-12">
+</div>
+
+<div class="row">
+    <div class="col-sm-7">
         <div class="form-group
             ${addressFields.phone.mandatory === true ? 'required' : ''}
             ${addressFields.phone.htmlName}">
-            <label class="form-control-label" for="shippingPhoneNumber${lineItem ? lineItem.UUID : 'default'}">
-                ${Resource.msg('field.shipping.address.phone', 'address', null)}
-            </label>
-            <input type="tel" class="form-control shippingPhoneNumber"
-                id="shippingPhoneNumber${lineItem ? lineItem.UUID : 'default'}"
-                aria-describedby="${lineItem ? lineItem.UUID : 'default'}TelephoneNumber"
-                value="${shippingAddress.phone || ''}" <isprint value="${addressFields.phone.attributes}"
-                encoding="off" /> placeholder="* 8754876534"
-            autocomplete="shipping tel" />
-            <div class="form-text">We need your phone number to assist delivery</div>
-            <div class="invalid-feedback" id="${lineItem ? lineItem.UUID : 'default'}TelephoneNumber">
-                <iscomment> <isprint value="${addressFields.phone.error}" /> </iscomment>
+            <iscomment> <label class="form-control-label"
+                    for="shippingPhoneNumber${lineItem ? lineItem.UUID : 'default'}">
+                    ${Resource.msg('field.shipping.address.phone', 'address', null)}
+                </label> </iscomment>
+            <div class="input-group">
+                <select class="form-select w-auto p-1 border border-none" name="phoneCountryCode">
+                    <option value="+1" data-flag="us">US &nbsp;+1</option>
+                </select>
+                <input type="tel" class="form-control shippingPhoneNumber"
+                    id="shippingPhoneNumber${lineItem ? lineItem.UUID : 'default'}"
+                    aria-describedby="${lineItem ? lineItem.UUID : 'default'}TelephoneNumber"
+                    value="${shippingAddress.phone || ''}" <isprint value="${addressFields.phone.attributes}"
+                    encoding="off" />
+                autocomplete="shipping tel" placeholder="* Phone number" />
             </div>
+            <div class="invalid-feedback" id="${lineItem ? lineItem.UUID : 'default'}TelephoneNumber">
+                <isprint value="${addressFields.phone.error}" />
+            </div>
+            <div class="form-text">We need your phone number to assist delivery.</div>
             <span>${Resource.msg('example.phone', 'forms', null)}</span>
         </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-8">
+        <div class="carbon-section">
+            <div class="carbon1">
+                <img class="leaf-icon" src='${URLUtils.staticURL("/images/leaf.png")}' alt="original" width="20" height="20" />
+                <div class="carbon1-text">Your order is 100% Carbon Neutral <br />
+                <span>powered by EWS</span>
+                </div>
+            </div>
+            <img class="info-icon" src='${URLUtils.staticURL("/images/info.png")}' alt="original" width="20" height="20" />
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-12 mt-4">
+        <p>Please note, by continuing with checkout ESW will process your personal data in accordance with its Data
+            Privacy Statement. You can read about how and why ESW processes personal data here.</p>
+        <p>Please review your shipping information, as once an order is placed it cannot be cancelled or modified.</p>
     </div>
 </div>
