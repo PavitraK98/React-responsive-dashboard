@@ -1,0 +1,21 @@
+<div class="d-flex flex-row justify-content-start align-items-center flex-wrap">
+    <isif condition="${pdict.folderSearch.folderContents[0].contents.length > 0}">
+        <isloop items="${pdict.folderSearch.folderContents[0].contents}" var="content">
+            <isif condition="${content.eventContentImages.length > 0}">
+                <div class="m-4">
+                    <a href="${URLUtils.url('Gallery-Content', 'contentId', content.id).toString()}">
+                        <img src="${content.eventContentImages[0]}" alt="${content.eventName}" class="rounded" />
+                    </a>
+                    <div class="d-flex flex-column justify-content-center align-items-center">
+                        <p class="text-white mt-2"><b>${content.eventName}</b></p>
+                        <p class="text-white">${JSON.stringify(content.eventContentImages.length)} Pictures</p>
+                    </div>
+                </div>
+            </isif>
+        </isloop>
+    <iselse/>
+        <div class="tab-no-content-found w-100 m-3 d-flex justify-content-center align-items-center">
+            <h4>Results match not found</h4>
+        </div>
+    </isif>
+</div>

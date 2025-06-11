@@ -1,0 +1,121 @@
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets');
+        assets.addJs('/js/gallery.js');
+        assets.addCss('/css/gallery.css');
+    </isscript>
+
+    <div id="gallery-album-page">
+        <div class="gallery-album-header">
+            <p class="heading-with-back-arrow">
+                <a href="${URLUtils.url('Gallery-Show')}">
+                    <img src="${URLUtils.staticURL('/images/backarrow-black.png')}" alt="backArrow" height=18 width=18
+                        class="pr-1" />
+                </a>
+                Gallery
+            </p>
+            <isif condition="${pdict.contentDetails}">
+                <p class="album-name">
+                    <b>${pdict.contentDetails.eventName}</b><br />
+                    Select type to download the rescpective resources
+                </p>
+            </isif>
+        </div>
+
+        <!-- tabs start-->
+
+        <div class="tabs">
+            <ul class="tab-links">
+                <li class="active"><a href="#tab1Images">Images</a></li>
+                <li><a href="#tab2Videos">Videos</a></li>
+            </ul>
+
+            <div class="tab-content">
+                <div id="tab1Images" class="tab active">
+                    <isif condition="${pdict.contentDetails.eventContentImages.length !== null}">
+                        <div class="tab-content-images">
+                            <isloop items="${pdict.contentDetails.eventContentImages}" var="image" status="loopstatus">
+                                <img class="content-img" id="openImageModel" src="${image}"
+                                    alt="${pdict.contentDetails.eventName}" data-src="${image}" />
+                            </isloop>
+                        </div>
+                    <iselse/>
+                        <div class="tab-no-content-images">
+                            <h4>No images found</h4>
+                        </div>
+                    </isif>
+                </div>
+
+                <div id="tab2Videos" class="tab">
+                    <isif condition="${pdict.contentDetails.eventContentVideos.length !== null}">
+                        <div class="tab-content-videos">
+                            <isloop items="${pdict.contentDetails.eventContentVideos}" var="video" status="loopstatus">
+                                <video id="openVideoModel" width="300" height="220" controls>
+                                    <source class="content-video" src="${video}" alt="${pdict.contentDetails.eventName}"
+                                        data-src="${video}" type="video/mp4" />
+                                    <source src="${video}" type="video/ogg" />
+                                </video>
+                            </isloop>
+                        </div>
+                    <iselse/>
+                        <div class="tab-no-content-videos">
+                            <h4>No videos found</h4>
+                        </div>
+                    </isif>
+                </div>
+            </div>
+        </div>
+        <!-- tabs end-->
+    </div>
+
+    <!-- modal for img start -->
+    <div id="imageModal" style="display:none;">
+        <div class="gallery-img-Model">
+            <div class="gallery-img-modal-dialog">
+                <div class="gallery-img-modal-body">
+                    <img class="gallery-model-img" id="modalImage" />
+                    <button type="button" class="closeBtn btn pointer-btn">
+                        <img src="${URLUtils.staticURL('/images/close-black.png')}" alt="close" width=18 height=18 />
+                    </button>
+                </div>
+                <div class="gallery-img-modal-footer">
+                    <div id="caption" class="col"></div>
+                    <div class="gallery-model-footer-widgets">
+                        <a href="" id="downloadImage" download>
+                            <img src="${URLUtils.staticURL('/images/download-black.png')}" alt="download" width=16
+                                height=16 />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal for img end -->
+
+    <!-- modal for video start -->
+    <div id="videoModal" style="display:none;">
+        <div class="gallery-video-Model">
+            <div class="gallery-video-modal-dialog">
+                <div class="gallery-video-modal-body">
+                    <video id="modalVideo" class="gallery-model-video" width="540" height="310" controls>
+                        <source type="video/mp4">
+                    </video>
+                    <button type="button" class="closeVideoBtn btn pointer-btn">
+                        <img src="${URLUtils.staticURL('/images/close-black.png')}" alt="close" width=18 height=18 />
+                    </button>
+                </div>
+                <div class="gallery-video-modal-footer">
+                    <div id="videoCaption" class="col"></div>
+                    <div class="gallery-model-footer-widgets">
+                        <a href="" id="downloadVideo" download="video">
+                            <img src="${URLUtils.staticURL('/images/download-black.png')}" alt="download" width=16
+                                height=16 />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal for video end -->
+
+</isdecorate>

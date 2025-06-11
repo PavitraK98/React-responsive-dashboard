@@ -1,0 +1,85 @@
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets');
+        assets.addCss('/css/gallery.css');
+    </isscript>
+
+    <div class="m-3" id="gallery-listing-page">
+        <h4 class="ml-4">GALLERY</h4>
+        <isif condition="${pdict.folderSearch.folderContents}">
+            <!-- Filter Section -->
+            <div class="gallery-filter-container">
+                <form class="gallery-filter-form row m-2">
+                    <isloop items="${pdict.folderSearch.folderContents}" var="folderItems">
+                        <isloop items="${folderItems.refinements}" var="refinement">
+                            <iscomment>
+                                <p>
+                                    <pre>${JSON.stringify(refinement)}</pre>
+                                </p>
+                            </iscomment>
+                            <isif condition="${refinement.refinementID !== ""}">
+                                <div class="gallery-filter-${refinement.refinementID} col d-flex flex-column">
+                                    <label for="${refinement.refinementID}">${refinement.refinementDisplayName}</label>
+                                    <select class="form-select form-select-lg mb-3 p-2" id="${refinement.refinementID}"
+                                        name="${refinement.refinementID}"
+                                        aria-label="${refinement.refinementDisplayName} selection">
+                                        <option value="" selected disabled>Select an option</option>
+                                        <option value="">All</option>
+                                        <isloop items="${refinement.values}" var="value">
+                                            <option value="${value.value}">${value.displayValue} - ${value.hitCount}
+                                            </option>
+                                        </isloop>
+                                    </select>
+                                </div>
+                            </isif>
+                        </isloop>
+                    </isloop>
+                    <div class="col d-flex justify-content-start align-items-center mt-3">
+                        <button type="button" class="btn btn-primary apply-gallery-filter-btn h-auto"
+                            data-apply-text="Apply Filters" data-clear-text="Clear All Filters">
+                            Apply Filters
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <iscomment> <isloop items="${pdict.folderSearch.folderContents}" var="folderItems">
+                <p>
+                    <pre>${JSON.stringify(folderItems.contents)}</pre>
+                </p>
+                <p>
+                    <pre>${JSON.stringify(folderItems.refinements)}</pre>
+                </p>
+            </isloop> </iscomment>
+
+            <!-- Gallery Content -->
+            <div class="gallery-content-container">
+                <div class="d-flex flex-row justify-content-start align-items-center flex-wrap">
+                    <isif condition="${pdict.folderSearch.folderContents[0].contents.length > 0}">
+                        <isloop items="${pdict.folderSearch.folderContents[0].contents}" var="content">
+                            <isif condition="${content.eventContentImages.length > 0}">
+                                <div class="card m-4">
+                                    <a href="${URLUtils.url('Gallery-Content', 'contentId', content.id).toString()}">
+                                        <img class="card-img-top rounded" src="${content.eventContentImages[0]}"
+                                            alt="${content.eventName}" />
+                                    </a>
+                                    <div class="card-body p-2">
+                                        <p class="card-text">
+                                            <b>${content.eventName}</b><br />
+                                            ${JSON.stringify(content.eventContentImages.length)}
+                                            Pictures
+                                        </p>
+                                    </div>
+                                </div>
+                            </isif>
+                        </isloop>
+                    <iselse/>
+                        <div class="tab-no-content-found w-100 m-3 d-flex justify-content-center align-items-center">
+                            <h4>Results match not found</h4>
+                        </div>
+                    </isif>
+                </div>
+            </div>
+        </isif>
+    </div>
+</isdecorate>
