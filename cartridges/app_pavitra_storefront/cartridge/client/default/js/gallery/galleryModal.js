@@ -47,55 +47,49 @@ document.body.addEventListener("click", function (e) {
 //for gallery-content : open modal to view img and download img -- end//
 
 //for gallery-content : open modal to view video and download video -- start//
-$(document).ready(function() {
-    // Video modal functionality
-    $('#openVideoModel').on('click', function(e) {
-        e.preventDefault();
-        var videoSrc = $(this).find('.content-video').attr('src');
-        var videoAlt = $(this).find('.content-video').attr('alt');
-        
-        // Set the video source in the modal - updated to target the source element
-        $('#modalVideo source').attr('src', videoSrc);
-        // Need to reload the video element after changing the source
-        var video = $('#modalVideo')[0];
-        video.load();
-        
-        $('#videoCaption').text(videoAlt);
-        
-        // Set download link
-        $('#downloadVideo').attr('href', videoSrc);
-        
-        // Show the modal
-        $('#videoModal').fadeIn();
-    });
+$(document).ready(function () {
+  $("#openVideoModel").on("click", function (e) {
+    e.preventDefault();
+    var videoSrc = $(this).find(".content-video").attr("src");
+    var videoAlt = $(this).find(".content-video").attr("alt");
 
-    // Close video modal
-    $('.closeVideoBtn').on('click', function() {
-        // Pause and reset the video
-        var video = $('#modalVideo')[0];
-        video.pause();
-        video.currentTime = 0;
-        
-        // Hide the modal
-        $('#videoModal').fadeOut();
-    });
+    $("#modalVideo source").attr("src", videoSrc);
+    var video = $("#modalVideo")[0];
+    video.load();
 
-    // Close modal when clicking outside the content
-    $('.gallery-video-Model').on('click', function(e) {
-        if ($(e.target).is('.gallery-video-Model')) {
-            // Pause and reset the video
-            var video = $('#modalVideo')[0];
-            video.pause();
-            video.currentTime = 0;
-            
-            // Hide the modal
-            $('#videoModal').fadeOut();
-        }
-    });
+    video.oncanplaythrough = function () {
+      video.play();
+    };
 
-    // Prevent modal close when clicking inside the dialog
-    $('.gallery-video-modal-dialog').on('click', function(e) {
-        e.stopPropagation();
+    $("#videoCaption").text(videoAlt);
+    $("#downloadVideo").attr({
+      href: videoSrc,
+      download: "",
     });
+    $("#videoModal").fadeIn();
+  });
+
+  // Close video modal
+  $(".closeVideoBtn").on("click", function () {
+    var video = $("#modalVideo")[0];
+    video.pause();
+    video.currentTime = 0;
+    $("#videoModal").fadeOut();
+  });
+
+  // Close modal when clicking outside the content
+  $(".gallery-video-Model").on("click", function (e) {
+    if ($(e.target).is(".gallery-video-Model")) {
+      var video = $("#modalVideo")[0];
+      video.pause();
+      video.currentTime = 0;
+      $("#videoModal").fadeOut();
+    }
+  });
+
+  // Prevent modal close when clicking inside the dialog
+  $(".gallery-video-modal-dialog").on("click", function (e) {
+    e.stopPropagation();
+  });
 });
 //for gallery-content : open modal to view video and download video -- end//

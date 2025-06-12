@@ -4,8 +4,22 @@
 #gallery-album-page .gallery-album-header {
   padding: 0px 5px;
 }
-#gallery-album-page .gallery-album-header .heading-with-back-arrow p {
+#gallery-album-page .gallery-album-header .heading-with-back-arrow {
   line-height: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#gallery-album-page .gallery-album-header .heading-with-back-arrow a img {
+  padding: 0px;
+  padding-right: 5px;
+  margin-top: -2px;
 }
 #gallery-album-page .gallery-album-header .album-name {
   line-height: 18px;
@@ -37,7 +51,7 @@
 }
 #gallery-album-page .tab-links li.active a,
 #gallery-album-page .tab-links li.active a:hover {
-  border-bottom: 1px solid #090909;
+  border-bottom: 2px solid #090909;
   text-decoration: none;
 }
 #gallery-album-page .tab-links li a {
@@ -45,14 +59,14 @@
   display: inline-block;
   border-radius: 3px 3px 0 0;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
   color: #0a0a0a;
   -webkit-transition: all linear 0.15s;
   transition: all linear 0.15s;
   text-decoration: none;
 }
 #gallery-album-page .tab-links li a:hover {
-  border-bottom: 1px solid #050505;
+  border-bottom: 2px solid #050505;
   text-decoration: none;
 }
 #gallery-album-page .tab-content {

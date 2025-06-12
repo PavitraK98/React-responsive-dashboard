@@ -9,10 +9,10 @@
         <div class="gallery-album-header">
             <p class="heading-with-back-arrow">
                 <a href="${URLUtils.url('Gallery-Show')}">
-                    <img src="${URLUtils.staticURL('/images/backarrow-black.png')}" alt="backArrow" height=18 width=18
-                        class="pr-1" />
+                        <img src="${URLUtils.staticURL('/images/backarrow-black.png')}" alt="backArrow" 
+                        height=16 width=18 />
                 </a>
-                Gallery
+                <b>Gallery</b>
             </p>
             <isif condition="${pdict.contentDetails}">
                 <p class="album-name">
@@ -107,7 +107,7 @@
                 <div class="gallery-video-modal-footer">
                     <div id="videoCaption" class="col"></div>
                     <div class="gallery-model-footer-widgets">
-                        <a href="" id="downloadVideo" download="video">
+                        <a href="" id="downloadVideo">
                             <img src="${URLUtils.staticURL('/images/download-black.png')}" alt="download" width=16
                                 height=16 />
                         </a>
