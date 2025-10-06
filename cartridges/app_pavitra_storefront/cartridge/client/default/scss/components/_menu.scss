@@ -167,6 +167,7 @@ $slide-out-animation: left 0.5s cubic-bezier(0, 1, 0.5, 1);
 
             .show > .dropdown-menu {
                 left: 0;
+                color: #000000;
             }
         }
     }
@@ -192,6 +193,7 @@ $slide-out-animation: left 0.5s cubic-bezier(0, 1, 0.5, 1);
         @include media-breakpoint-up($next-breakpoint) {
             top: -0.65em;
             left: 99%;
+            color: #000000
         }
     }
 
