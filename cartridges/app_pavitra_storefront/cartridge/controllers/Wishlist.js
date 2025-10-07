@@ -31,12 +31,14 @@ server.append("RemoveProduct",function (req, res, next) {
     var viewData = res.getViewData();
 
     if(viewData.success){
-        var productId = req.form.productId;
-        var product = ProductMgr.getProduct(productId);
-        if (product) {
-            Transaction.wrap(function () {
-                product.custom.iswishlisted = false;
-            });
+        if (typeof productId === 'string') {
+            var productId = req.form.productId;
+            var product = ProductMgr.getProduct(productId);
+            if (product) {
+                Transaction.wrap(function () {
+                    product.custom.iswishlisted = false;
+                });
+            }
         }
     }
     next();
