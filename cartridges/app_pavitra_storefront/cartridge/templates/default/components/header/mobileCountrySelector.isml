@@ -6,7 +6,7 @@
         </span>
         <div class="dropdown-menu dropdown-country-selector" aria-labelledby="dropdownCountrySelector">
             <isloop items="${pdict.localeModel.locale.localeLinks}" var="localeLink">
-                <a class="dropdown-item" href="${'#'}" data-locale="${localeLink.localID}" data-currencyCode="${localeLink.currencyCode}" >
+                <a class="dropdown-item" href="${'#'}" data-locale="${localeLink.localID}" data-currencycode="${localeLink.currencyCode}" >
                     <i class="fi fi-${localeLink.country.toLowerCase()}"></i>
                     ${localeLink.displayName}
                 </a>
